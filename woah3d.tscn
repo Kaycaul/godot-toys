@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://csd2oq0b8jtig"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_waf3d"]
+size = Vector3(4.23199, 0.307495, 4.38782)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_waf3d"]
+radius = 0.151569
+height = 0.704591
+
+[node name="Woah3d" type="Node3D"]
+
+[node name="ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.307281, 0.346252, 0.314514)
+shape = SubResource("BoxShape3D_waf3d")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.222168, 1.35305, 0.872058)
+shape = SubResource("CapsuleShape3D_waf3d")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
