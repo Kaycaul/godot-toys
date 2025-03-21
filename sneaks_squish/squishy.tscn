@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://deac25qtlxyht"]
+
+[ext_resource type="Script" uid="uid://dnhmvulfsv8fs" path="res://sneaks_squish/squishy.gd" id="1_d2jbu"]
+[ext_resource type="Texture2D" uid="uid://cadpbxhfenuar" path="res://icon.svg" id="2_mo5k8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mo5k8"]
+friction = 0.35
+bounce = 0.47
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo5k8"]
+size = Vector2(128, 128)
+
+[node name="Squishy" type="RigidBody2D"]
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_mo5k8")
+script = ExtResource("1_d2jbu")
+
+[node name="SpriteContainer" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sprite" type="Sprite2D" parent="SpriteContainer"]
+unique_name_in_owner = true
+position = Vector2(0, -64)
+texture = ExtResource("2_mo5k8")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -64)
+shape = SubResource("RectangleShape2D_mo5k8")

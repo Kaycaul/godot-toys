@@ -1,0 +1,2608 @@
+[gd_scene load_steps=6 format=3 uid="uid://d35ihof0ee1aq"]
+
+[ext_resource type="PackedScene" uid="uid://deac25qtlxyht" path="res://sneaks_squish/squishy.tscn" id="1_rdqt6"]
+[ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://sneaks_squish/sneakers.png" id="2_c5xc1"]
+[ext_resource type="PackedScene" uid="uid://dw715s0maufg0" path="res://sneaks_squish/cursor.tscn" id="3_lrlm7"]
+
+[sub_resource type="Curve" id="Curve_c5xc1"]
+_data = [Vector2(0, 1), 0.0, -5.07323, 0, 0, Vector2(0.202952, 0.140262), 0.0, 0.0, 0, 0, Vector2(1, 1), 1.31605, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5xc1"]
+size = Vector2(3346.93, 218.284)
+
+[node name="SneaksSquish" type="Node2D"]
+
+[node name="squishies" type="Node2D" parent="."]
+
+[node name="Squishy3" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(132, 273)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy8" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(72, 84)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy9" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(728, 136)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy26" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(728, 136)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy4" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(421, 140)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy5" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(493, 388)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy10" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(864, 159)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy11" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(855, 382)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy12" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(726, 438)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy13" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(525, 262)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy14" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(306, 343)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy15" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(186, 512)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy16" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(454, 366)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy17" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1288, 320)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy219" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1288, 320)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy220" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1470, -976)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy221" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1163, -972)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy222" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1235, -724)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy223" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1606, -953)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy224" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1597, -730)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy225" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1468, -674)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy226" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1267, -850)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy227" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1048, -769)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy228" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(928, -600)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy229" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1196, -746)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy230" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2030, -792)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy231" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2030, -792)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy232" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1742, -352)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy233" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1435, -348)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy234" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1507, -100)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy235" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1878, -329)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy236" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1869, -106)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy237" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1740, -50)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy238" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1539, -226)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy239" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1320, -145)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy240" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1200, 24)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy241" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1468, -122)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy242" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2302, -168)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy243" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2302, -168)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy244" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1366, 168)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy245" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1059, 172)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy246" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1131, 420)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy247" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1502, 191)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy248" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1493, 414)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy249" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1364, 470)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy250" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1163, 294)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy251" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(944, 375)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy252" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(824, 544)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy253" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1092, 398)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy254" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1926, 352)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy255" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1926, 352)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy256" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(830, 576)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy257" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(523, 580)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy258" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(595, 828)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy259" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(966, 599)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy260" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(957, 822)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy261" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(828, 878)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy262" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(627, 702)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy263" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(408, 783)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy264" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(288, 952)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy265" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(556, 806)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy266" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1390, 760)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy267" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1390, 760)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy268" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-34, 568)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy269" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-341, 572)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy270" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-269, 820)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy271" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(102, 591)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy272" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(93, 814)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy273" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-36, 870)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy274" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-237, 694)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy275" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-456, 775)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy276" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-576, 944)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy277" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-308, 798)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy278" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(526, 752)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy279" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(526, 752)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy280" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-258, 16)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy281" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-565, 20)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy282" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-493, 268)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy283" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-122, 39)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy284" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-131, 262)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy285" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-260, 318)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy286" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-461, 142)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy287" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-680, 223)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy288" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-800, 392)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy289" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-532, 246)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy290" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(302, 200)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy291" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(302, 200)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy292" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-442, -456)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy293" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-749, -452)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy294" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-677, -204)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy295" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-306, -433)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy296" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-315, -210)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy297" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-444, -154)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy298" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-645, -330)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy299" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-864, -249)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy300" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-984, -80)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy301" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-716, -226)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy302" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(118, -272)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy303" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(118, -272)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy304" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(182, -728)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy305" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-125, -724)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy306" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-53, -476)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy307" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(318, -705)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy308" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(309, -482)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy309" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(180, -426)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy310" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-21, -602)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy311" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-240, -521)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy312" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-360, -352)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy313" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-92, -498)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy314" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(742, -544)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy315" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(742, -544)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy316" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(998, -888)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy317" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(691, -884)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy318" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(763, -636)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy319" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1134, -865)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy320" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1125, -642)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy321" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(996, -586)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy322" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(795, -762)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy323" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(576, -681)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy324" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(456, -512)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy325" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(724, -658)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy326" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1558, -704)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy327" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1558, -704)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy328" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1782, -880)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy329" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1475, -876)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy330" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1547, -628)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy331" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1918, -857)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy332" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1909, -634)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy333" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1780, -578)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy334" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1579, -754)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy335" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1360, -673)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy336" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1240, -504)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy337" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1508, -650)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy338" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2342, -696)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy339" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2342, -696)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy340" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2078, -560)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy341" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1771, -556)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy342" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1843, -308)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy343" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2214, -537)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy344" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2205, -314)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy345" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2076, -258)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy346" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1875, -434)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy347" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1656, -353)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy348" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1536, -184)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy349" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1804, -330)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy350" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2638, -376)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy351" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2638, -376)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy352" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2174, 112)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy353" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1867, 116)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy354" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1939, 364)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy355" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2310, 135)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy356" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2301, 358)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy357" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2172, 414)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy358" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1971, 238)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy359" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1752, 319)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy360" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1632, 488)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy361" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1900, 342)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy362" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2734, 296)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy363" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2734, 296)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy18" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(116, 345)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy39" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-884, -483)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy40" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-944, -672)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy41" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-288, -620)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy42" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-288, -620)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy43" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-595, -616)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy44" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-523, -368)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy45" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-152, -597)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy46" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-161, -374)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy47" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-290, -318)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy48" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-491, -494)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy49" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-710, -413)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy50" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-830, -244)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy51" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-562, -390)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy52" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-673, -574)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy53" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-900, -411)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy54" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(484, -571)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy55" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(424, -760)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy56" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1080, -708)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy57" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1080, -708)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy58" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(773, -704)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy59" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(845, -456)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy60" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1216, -685)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy61" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1207, -462)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy62" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1078, -406)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy63" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(877, -582)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy64" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(658, -501)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy65" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(538, -332)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy66" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(806, -478)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy67" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(695, -662)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy68" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(468, -499)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy69" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1596, -43)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy70" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1536, -232)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy71" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2192, -180)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy72" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2192, -180)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy73" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1885, -176)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy74" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1957, 72)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy75" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2328, -157)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy76" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2319, 66)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy77" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2190, 122)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy78" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1989, -54)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy79" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1770, 27)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy80" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1650, 196)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy81" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1918, 50)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy82" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1807, -134)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy83" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1580, 29)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy84" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1636, -779)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy85" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1576, -968)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy86" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2232, -916)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy87" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2232, -916)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy88" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1925, -912)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy89" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1997, -664)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy90" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2368, -893)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy91" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2359, -670)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy92" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2230, -614)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy93" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2029, -790)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy94" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1810, -709)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy95" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1690, -540)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy96" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1958, -686)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy97" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1847, -870)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy98" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1620, -707)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy99" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1692, 685)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy100" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1632, 496)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy101" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2288, 548)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy102" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2288, 548)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy103" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1981, 552)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy104" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2053, 800)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy105" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2424, 571)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy106" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2415, 794)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy107" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2286, 850)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy108" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2085, 674)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy109" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1866, 755)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy110" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1746, 924)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy111" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(2014, 778)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy112" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1903, 594)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy113" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1676, 757)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy114" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1068, 605)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy115" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1128, 416)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy116" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-472, 468)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy117" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-472, 468)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy118" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-779, 472)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy119" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-707, 720)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy120" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-336, 491)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy121" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-345, 714)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy122" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-474, 770)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy123" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-675, 594)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy124" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-894, 675)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy125" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1014, 844)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy126" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-746, 698)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy127" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-857, 514)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy128" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1084, 677)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy129" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-924, 189)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy130" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-984, 0)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy131" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-328, 52)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy132" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-328, 52)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy133" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-635, 56)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy134" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-563, 304)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy135" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-192, 75)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy136" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-201, 298)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy137" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-330, 354)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy138" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-531, 178)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy139" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-750, 259)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy140" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-870, 428)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy141" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-602, 282)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy142" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-713, 98)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy143" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-940, 261)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy144" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1324, -955)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy145" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1384, -1144)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy146" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-728, -1092)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy147" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-728, -1092)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy148" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1035, -1088)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy149" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-963, -840)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy150" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-592, -1069)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy151" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-601, -846)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy152" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-730, -790)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy153" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-931, -966)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy154" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1150, -885)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy155" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1270, -716)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy156" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1002, -862)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy157" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1113, -1046)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy158" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-1340, -883)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy159" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-108, -971)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy160" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-168, -1160)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy161" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(488, -1108)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy162" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(488, -1108)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy163" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(181, -1104)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy164" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(253, -856)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy165" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(624, -1085)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy166" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(615, -862)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy167" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(486, -806)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy168" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(285, -982)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy169" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(66, -901)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy170" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-54, -732)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy171" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(214, -878)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy172" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(103, -1062)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy173" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-124, -899)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy174" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-204, -187)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy175" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-264, -376)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy176" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(392, -324)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy177" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(392, -324)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy178" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(85, -320)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy179" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(157, -72)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy180" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(528, -301)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy181" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(519, -78)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy182" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(390, -22)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy183" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(189, -198)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy184" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-30, -117)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy185" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-150, 52)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy186" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(118, -94)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy187" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(7, -278)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy188" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-220, -115)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy189" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(876, -235)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy190" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(816, -424)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy191" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1472, -372)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy192" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1472, -372)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy193" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1165, -368)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy194" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1237, -120)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy195" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1608, -349)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy196" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1599, -126)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy197" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1470, -70)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy198" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1269, -246)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy199" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1050, -165)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy200" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(930, 4)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy201" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1198, -142)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy202" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1087, -326)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy203" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(860, -163)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy204" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(876, -235)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy205" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(816, -424)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy206" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1472, -372)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy207" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1472, -372)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy208" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1165, -368)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy209" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1237, -120)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy210" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1608, -349)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy211" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1599, -126)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy212" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1470, -70)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy213" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1269, -246)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy214" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1050, -165)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy364" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-168, -560)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy365" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(488, -508)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy366" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(488, -508)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy367" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(181, -504)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy368" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(253, -256)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy369" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(624, -485)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy370" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(615, -262)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy371" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(486, -206)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy372" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(285, -382)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy373" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(66, -301)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy374" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-54, -132)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy375" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(214, -278)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy376" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(103, -462)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy377" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-124, -299)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy378" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-108, -371)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy379" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(-168, -560)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy380" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(488, -508)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy381" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(488, -508)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy382" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(181, -504)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy383" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(253, -256)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy384" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(624, -485)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy385" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(615, -262)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy386" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(486, -206)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy387" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(285, -382)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy388" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(66, -301)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy389" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(828, 140)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy390" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1484, 192)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy391" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1484, 192)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy392" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1177, 196)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy393" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1249, 444)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy394" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1620, 215)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy395" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1611, 438)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy396" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1482, 494)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy397" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1281, 318)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy398" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1062, 399)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy399" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(942, 568)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy400" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1210, 422)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy401" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1099, 238)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy402" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(872, 401)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy403" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(888, 329)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy404" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(828, 140)
+rotation = 1.26993
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy405" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1484, 192)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy406" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1484, 192)
+rotation = -1.20588
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy407" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1177, 196)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy408" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1249, 444)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy409" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1620, 215)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy410" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1611, 438)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy411" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1482, 494)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy412" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1281, 318)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy413" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1062, 399)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy215" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(930, 4)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy216" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1198, -142)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy217" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1087, -326)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy218" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(860, -163)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy19" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(890, 105)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy20" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(1044, 328)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy21" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(624, 480)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy27" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(624, 480)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy28" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(864, 440)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy29" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(856, 552)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy30" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(752, 280)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy31" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(448, 496)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy32" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(296, 504)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy33" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(152, 584)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy34" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(528, 568)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy35" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(728, 552)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy36" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(968, 472)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy37" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(576, 392)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy38" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(576, 368)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy22" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(915, 287)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy23" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(979, 96)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy24" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(531, 113)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy25" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(542, 149)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy6" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(633, 237)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="Squishy7" parent="squishies" instance=ExtResource("1_rdqt6")]
+position = Vector2(367, 312)
+texture = ExtResource("2_c5xc1")
+squish_duration = 0.25
+squish_curve = SubResource("Curve_c5xc1")
+
+[node name="walls" type="Node2D" parent="."]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="walls"]
+position = Vector2(-960, 1080)
+rotation = 3.14159
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D4"]
+position = Vector2(-1616, -112.007)
+scale = Vector2(1.35466, 0.515864)
+shape = SubResource("RectangleShape2D_c5xc1")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="walls"]
+position = Vector2(-952, -1496)
+rotation = 3.14159
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D5"]
+position = Vector2(-1616, -112.007)
+scale = Vector2(1.35466, 0.515864)
+shape = SubResource("RectangleShape2D_c5xc1")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="walls"]
+position = Vector2(-1464, -1976)
+rotation = -1.5708
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D6"]
+position = Vector2(-1616, -112.007)
+scale = Vector2(1.35466, 0.515864)
+shape = SubResource("RectangleShape2D_c5xc1")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="walls"]
+position = Vector2(3064, -1568)
+rotation = -1.5708
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D7"]
+position = Vector2(-1616, -112.007)
+scale = Vector2(1.35466, 0.515864)
+shape = SubResource("RectangleShape2D_c5xc1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(688, -104)
+zoom = Vector2(0.26, 0.26)
+
+[node name="Cursor" parent="." instance=ExtResource("3_lrlm7")]

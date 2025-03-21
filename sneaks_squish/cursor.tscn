@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw715s0maufg0"]
+
+[ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://sneaks_squish/sneakers.png" id="1_1k86r"]
+[ext_resource type="Script" uid="uid://rcelhxc2e5sn" path="res://sneaks_squish/cursor.gd" id="1_xn72g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xn72g"]
+radius = 465.81
+
+[node name="Cursor" type="Node2D"]
+script = ExtResource("1_xn72g")
+
+[node name="Sneakers" type="Sprite2D" parent="."]
+texture = ExtResource("1_1k86r")
+
+[node name="Explosion" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Explosion"]
+shape = SubResource("CircleShape2D_xn72g")
