@@ -30,6 +30,7 @@ func squish(delta: float) -> void:
 		var squish_factor := squish_curve.sample(t)
 		sprite_container.scale.y = squish_factor
 		collider.scale.y = sprite_container.scale.y
-		collider.position.y = -64 * squish_factor
+		var sprite_height : int = sprite.texture.get_height()
+		collider.position.y = sprite_height * -0.5 * squish_factor
 		sprite_container.scale.x = 1.0 + (1.0 - squish_factor) * 0.2
 		collider.scale.x = sprite_container.scale.x
