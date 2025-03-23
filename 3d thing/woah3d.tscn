@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://csd2oq0b8jtig"]
+
+[ext_resource type="Script" uid="uid://rfqvrsdf71te" path="res://3d thing/player.gd" id="1_auixp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_waf3d"]
+size = Vector3(5.75732, 0.300781, 6.40186)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4qkd6"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_auixp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_waf3d"]
+radius = 0.151569
+height = 0.704591
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4qkd6"]
+
+[node name="Woah3d" type="Node3D"]
+
+[node name="ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02222, 0.349609, 0.0446777)
+shape = SubResource("BoxShape3D_waf3d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
+transform = Transform3D(6.77469, 0, 0, 0, 1, 0, 0, 0, 6.44633, 0.869236, 0, 0)
+mesh = SubResource("BoxMesh_4qkd6")
+
+[node name="player" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0430585, 1.75731, 0.0241219)
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_auixp")
+script = ExtResource("1_auixp")
+movement_force = 20.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player"]
+shape = SubResource("CapsuleShape3D_waf3d")
+
+[node name="Camera3D" type="Camera3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.142364, -0.190207)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="player"]
+transform = Transform3D(0.305, 0, 0, 0, 0.305, 0, 0, 0, 0.305, 0, -0.04, 0)
+mesh = SubResource("CapsuleMesh_4qkd6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.4807, -0.861581, -0.163115, -0.38716, -0.375437, 0.842113, -0.786787, -0.341652, -0.514042, 0, 0, 0)

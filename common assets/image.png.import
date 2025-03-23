@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ivilkt47eeng"
-path="res://.godot/imported/image.png-945f338ba2a796e4706803d90c5de638.ctex"
+path="res://.godot/imported/image.png-2ccfa8e3d6faacc108eac311b1641247.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sneaks_squish/image.png"
-dest_files=["res://.godot/imported/image.png-945f338ba2a796e4706803d90c5de638.ctex"]
+source_file="res://common assets/image.png"
+dest_files=["res://.godot/imported/image.png-2ccfa8e3d6faacc108eac311b1641247.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh5rrnepd78bc"
-path="res://.godot/imported/nailoing.png-632dd96a6293b0cdc2e6ed4656bcd0c3.ctex"
+uid="uid://dsll6hmgr2uut"
+path="res://.godot/imported/sneakers.png-8521500d941b09225f3e942fd689d1c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sneaks_squish/nailoing.png"
-dest_files=["res://.godot/imported/nailoing.png-632dd96a6293b0cdc2e6ed4656bcd0c3.ctex"]
+source_file="res://common assets/sneakers.png"
+dest_files=["res://.godot/imported/sneakers.png-8521500d941b09225f3e942fd689d1c7.ctex"]
 
 [params]
 

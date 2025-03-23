@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://bp0hkpnp51tgi"]
 
 [ext_resource type="PackedScene" uid="uid://deac25qtlxyht" path="res://sneaks_squish/squishy.tscn" id="1_kkj1m"]
-[ext_resource type="Texture2D" uid="uid://cyb1i8ibcdidp" path="res://sneaks_squish/stare.png" id="2_r05hv"]
+[ext_resource type="Texture2D" uid="uid://cyb1i8ibcdidp" path="res://common assets/stare.png" id="2_r05hv"]
 [ext_resource type="Curve" uid="uid://by4562ji5kbu2" path="res://sneaks_squish/squish_curve.tres" id="3_vk0mc"]
-[ext_resource type="Texture2D" uid="uid://cw5j5t003g0bj" path="res://sneaks_squish/wega.png" id="4_gtskk"]
-[ext_resource type="Texture2D" uid="uid://b28bh1ibgki1l" path="res://sneaks_squish/despair.png" id="4_t7hol"]
-[ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://sneaks_squish/sneakers.png" id="6_yx6pl"]
+[ext_resource type="Texture2D" uid="uid://cw5j5t003g0bj" path="res://common assets/wega.png" id="4_gtskk"]
+[ext_resource type="Texture2D" uid="uid://b28bh1ibgki1l" path="res://common assets/despair.png" id="4_t7hol"]
+[ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://common assets/sneakers.png" id="6_yx6pl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vk0mc"]
 friction = 0.0

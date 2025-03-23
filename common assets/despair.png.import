@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b28bh1ibgki1l"
-path="res://.godot/imported/despair.png-b9ce2c579d0d0a580ac675625bac4ed6.ctex"
+path="res://.godot/imported/despair.png-962553ff873c3b422f2f0c76232cf05a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sneaks_squish/despair.png"
-dest_files=["res://.godot/imported/despair.png-b9ce2c579d0d0a580ac675625bac4ed6.ctex"]
+source_file="res://common assets/despair.png"
+dest_files=["res://.godot/imported/despair.png-962553ff873c3b422f2f0c76232cf05a.ctex"]
 
 [params]
 
