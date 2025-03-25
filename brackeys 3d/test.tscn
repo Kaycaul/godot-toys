@@ -1,0 +1,115 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0hjw8elm8622"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_jon7w"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_okr0w"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_jon7w"]
+sky_material = SubResource("ProceduralSkyMaterial_okr0w")
+
+[sub_resource type="Environment" id="Environment_s02ou"]
+background_mode = 2
+sky = SubResource("Sky_jon7w")
+tonemap_mode = 2
+
+[node name="Test" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_s02ou")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.407564, 0.289641, 0, 0.579281, 0.815128, -0.5, 0.705921, -0.501672, 0, 0, 0)
+light_color = Color(1, 1, 0.882353, 1)
+light_energy = 0.7
+shadow_enabled = true
+directional_shadow_max_distance = 295.0
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.45, 3.1, 0)
+use_collision = true
+size = Vector3(0.9, 6.5, 8.5)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+operation = 2
+size = Vector3(1.6, 2.9, 5.1)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, -0.7, 1.6)
+operation = 2
+radius = 1.738
+height = 1.2
+sides = 32
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.85, 1.8, 5.6)
+use_collision = true
+size = Vector3(0.9, 6.5, 8.5)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+operation = 2
+size = Vector3(1.6, 2.9, 5.1)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D/CSGBox3D8"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, -0.7, 1.6)
+operation = 2
+radius = 1.738
+height = 1.2
+sides = 32
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.45, 3.1, -8.5)
+use_collision = true
+size = Vector3(0.9, 6.5, 8.5)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+operation = 2
+size = Vector3(1.6, 2.9, 5.1)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D/CSGBox3D3"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, -0.7, 1.6)
+operation = 2
+radius = 1.738
+height = 1.2
+sides = 32
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+use_collision = true
+size = Vector3(23.2, 0.3, 27.7)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 1.5, 8.7)
+use_collision = true
+size = Vector3(11.5, 2.8, 0.4)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.8, 1.5, 3.1)
+use_collision = true
+size = Vector3(11.5, 2.8, 0.4)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.1, 1.5, -1.3)
+use_collision = true
+size = Vector3(11.5, 2.8, 0.4)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.95, 3.2, -1.3)
+use_collision = true
+size = Vector3(11.5, 0.6, 6.1)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D/CSGBox3D7"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.3, 0.0250001, 0.250002)
+operation = 2
+radius = 2.0
+height = 0.75
+sides = 16
+
+[node name="ProtoController" parent="." instance=ExtResource("1_jon7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3, 0.2, -7.5)
