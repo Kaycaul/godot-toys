@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bimwdc56b2i6m"]
+
+[ext_resource type="Script" uid="uid://bhkpdnv1qjnct" path="res://factory/scripts/belt.gd" id="1_70tp4"]
+[ext_resource type="PackedScene" uid="uid://bcvnomaj5ycm3" path="res://factory/scenes/wall.tscn" id="1_e2s2g"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_70tp4"]
+friction = 0.02
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2s2g"]
+size = Vector2(16, 1)
+
+[node name="Belt" type="Node2D"]
+script = ExtResource("1_70tp4")
+
+[node name="Wall" parent="." instance=ExtResource("1_e2s2g")]
+physics_material_override = SubResource("PhysicsMaterial_70tp4")
+
+[node name="Pusher" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pusher"]
+position = Vector2(0, -8.5)
+shape = SubResource("RectangleShape2D_e2s2g")

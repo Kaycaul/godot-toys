@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcvnomaj5ycm3"]
+
+[ext_resource type="Texture2D" uid="uid://b28bh1ibgki1l" path="res://common assets/despair.png" id="1_cav6t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwq1j"]
+size = Vector2(16, 16)
+
+[node name="Wall" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fwq1j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_cav6t")

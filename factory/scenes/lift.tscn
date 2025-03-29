@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw8egv1gevmnv"]
+
+[ext_resource type="Script" uid="uid://dqqnrdg1ecb7" path="res://factory/scripts/lift.gd" id="1_to3ix"]
+[ext_resource type="Texture2D" uid="uid://c2ej4httw3scb" path="res://common assets/wolp.png" id="1_x2fgv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2fgv"]
+size = Vector2(16, 16)
+
+[node name="Lift" type="Node2D"]
+script = ExtResource("1_to3ix")
+
+[node name="Lifter" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lifter"]
+shape = SubResource("RectangleShape2D_x2fgv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.211765)
+z_index = -1
+position = Vector2(0, -7.62939e-06)
+scale = Vector2(0.0248834, 0.0250784)
+texture = ExtResource("1_x2fgv")

@@ -1,0 +1,216 @@
+[gd_scene load_steps=7 format=3 uid="uid://v4lplyn6mwkg"]
+
+[ext_resource type="PackedScene" uid="uid://bcvnomaj5ycm3" path="res://factory/scenes/wall.tscn" id="1_oqff4"]
+[ext_resource type="PackedScene" uid="uid://bmtd2pu104yfg" path="res://factory/scenes/prop.tscn" id="2_gcd8h"]
+[ext_resource type="Texture2D" uid="uid://dmi611ggxgang" path="res://common assets/circle.png" id="3_2rjvl"]
+[ext_resource type="PackedScene" uid="uid://bimwdc56b2i6m" path="res://factory/scenes/belt.tscn" id="3_sh5dn"]
+[ext_resource type="PackedScene" uid="uid://dw8egv1gevmnv" path="res://factory/scenes/lift.tscn" id="4_2x4ns"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2x4ns"]
+friction = 0.3
+bounce = 0.65
+
+[node name="Factory" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2, -56)
+zoom = Vector2(4.64, 4.64)
+
+[node name="walls" type="Node2D" parent="."]
+
+[node name="Wall3" parent="walls" instance=ExtResource("1_oqff4")]
+position = Vector2(-96, -48)
+rotation = 1.5708
+scale = Vector2(5.92, 1)
+
+[node name="Wall5" parent="walls" instance=ExtResource("1_oqff4")]
+position = Vector2(-87, -104)
+rotation = 2.87979
+scale = Vector2(4.19466, 1)
+
+[node name="Wall4" parent="walls" instance=ExtResource("1_oqff4")]
+position = Vector2(80, -56)
+rotation = 4.71239
+scale = Vector2(5.92, 1)
+
+[node name="props" type="Node2D" parent="."]
+
+[node name="prop" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(-16, -128)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="circle" type="Sprite2D" parent="props/prop"]
+z_index = 1
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("3_2rjvl")
+
+[node name="prop2" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(-32, -136)
+mass = 1.438
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="prop3" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(-40, -120)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop3" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop3" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="prop4" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(10, -144)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop4" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop4" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="prop5" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(16, -120)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop5" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop5" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="prop6" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(6, -120)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop6" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop6" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="prop7" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(40, -140)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop7" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop7" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="prop8" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(48, -116)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop8" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop8" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="prop9" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(36, -120)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop9" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop9" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="prop10" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(32, -136)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop10" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop10" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="prop11" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(16, -140)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop11" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop11" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="prop12" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(-8, -140)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop12" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop12" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="prop13" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(-16, -160)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop13" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop13" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="prop14" parent="props" instance=ExtResource("2_gcd8h")]
+position = Vector2(2, -168)
+physics_material_override = SubResource("PhysicsMaterial_2x4ns")
+
+[node name="CollisionShape2D" parent="props/prop14" index="0"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="props/prop14" index="1"]
+scale = Vector2(0.063, 0.063)
+
+[node name="Belt" parent="." instance=ExtResource("3_sh5dn")]
+position = Vector2(-24, -72)
+scale = Vector2(3.44, 1)
+max_speed = 350.0
+force = 400.0
+
+[node name="Belt2" parent="." instance=ExtResource("3_sh5dn")]
+position = Vector2(32, -40)
+scale = Vector2(3.92, 1)
+reverse = true
+max_speed = 350.0
+force = 400.0
+
+[node name="Belt3" parent="." instance=ExtResource("3_sh5dn")]
+position = Vector2(6, 0)
+scale = Vector2(11.76, 1)
+reverse = true
+max_speed = 50.0
+force = 50.0
+
+[node name="Lift" parent="." instance=ExtResource("4_2x4ns")]
+position = Vector2(-72, -56)
+scale = Vector2(1.98683, 5.99489)
+max_speed = 80.0
+force = 1500.0
+
+[editable path="props/prop"]
+[editable path="props/prop3"]
+[editable path="props/prop4"]
+[editable path="props/prop5"]
+[editable path="props/prop6"]
+[editable path="props/prop7"]
+[editable path="props/prop8"]
+[editable path="props/prop9"]
+[editable path="props/prop10"]
+[editable path="props/prop11"]
+[editable path="props/prop12"]
+[editable path="props/prop13"]
+[editable path="props/prop14"]
