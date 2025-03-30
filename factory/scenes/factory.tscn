@@ -12,14 +12,15 @@ bounce = 0.65
 
 [node name="Factory" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(2, -56)
-zoom = Vector2(4.64, 4.64)
-
 [node name="walls" type="Node2D" parent="."]
 
 [node name="Wall3" parent="walls" instance=ExtResource("1_oqff4")]
 position = Vector2(-96, -48)
+rotation = 1.5708
+scale = Vector2(5.92, 1)
+
+[node name="Wall9" parent="walls" instance=ExtResource("1_oqff4")]
+position = Vector2(-64, -160)
 rotation = 1.5708
 scale = Vector2(5.92, 1)
 
@@ -28,10 +29,25 @@ position = Vector2(-87, -104)
 rotation = 2.87979
 scale = Vector2(4.19466, 1)
 
+[node name="Wall7" parent="walls" instance=ExtResource("1_oqff4")]
+position = Vector2(56, -152)
+rotation = 1.5708
+scale = Vector2(1.52, 1)
+
+[node name="Wall8" parent="walls" instance=ExtResource("1_oqff4")]
+position = Vector2(66, -172)
+rotation = 2.87979
+scale = Vector2(4.19466, 1)
+
 [node name="Wall4" parent="walls" instance=ExtResource("1_oqff4")]
-position = Vector2(80, -56)
+position = Vector2(248, -128)
 rotation = 4.71239
-scale = Vector2(5.92, 1)
+scale = Vector2(15.12, 1)
+
+[node name="Wall6" parent="walls" instance=ExtResource("1_oqff4")]
+position = Vector2(104, -104)
+rotation = 4.71239
+scale = Vector2(4.08, 1)
 
 [node name="props" type="Node2D" parent="."]
 
@@ -43,6 +59,7 @@ physics_material_override = SubResource("PhysicsMaterial_2x4ns")
 scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" parent="props/prop" index="1"]
+modulate = Color(0.818008, 0, 0.312146, 1)
 scale = Vector2(0.063, 0.063)
 
 [node name="circle" type="Sprite2D" parent="props/prop"]
@@ -64,6 +81,9 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" parent="props/prop3" index="1"]
 scale = Vector2(0.063, 0.063)
+
+[node name="Camera2D" type="Camera2D" parent="props/prop3"]
+zoom = Vector2(13.375, 13.375)
 
 [node name="prop4" parent="props" instance=ExtResource("2_gcd8h")]
 position = Vector2(10, -144)
@@ -176,21 +196,46 @@ scale = Vector2(0.5, 0.5)
 scale = Vector2(0.063, 0.063)
 
 [node name="Belt" parent="." instance=ExtResource("3_sh5dn")]
-position = Vector2(-24, -72)
-scale = Vector2(3.44, 1)
+position = Vector2(6, -80)
+scale = Vector2(7.82984, 0.442048)
+max_speed = 350.0
+force = 400.0
+
+[node name="Belt7" parent="." instance=ExtResource("3_sh5dn")]
+position = Vector2(-12, -176)
+scale = Vector2(7.82984, 0.442048)
+max_speed = 350.0
+force = 400.0
+
+[node name="Belt4" parent="." instance=ExtResource("3_sh5dn")]
+position = Vector2(152, -144)
+scale = Vector2(6.96, 1)
+max_speed = 350.0
+force = 400.0
+
+[node name="Belt6" parent="." instance=ExtResource("3_sh5dn")]
+position = Vector2(136, -72)
+scale = Vector2(3.64, 1)
 max_speed = 350.0
 force = 400.0
 
 [node name="Belt2" parent="." instance=ExtResource("3_sh5dn")]
-position = Vector2(32, -40)
+position = Vector2(88, -40)
+scale = Vector2(3.92, 1)
+reverse = true
+max_speed = 350.0
+force = 400.0
+
+[node name="Belt5" parent="." instance=ExtResource("3_sh5dn")]
+position = Vector2(208, -104)
 scale = Vector2(3.92, 1)
 reverse = true
 max_speed = 350.0
 force = 400.0
 
 [node name="Belt3" parent="." instance=ExtResource("3_sh5dn")]
-position = Vector2(6, 0)
-scale = Vector2(11.76, 1)
+position = Vector2(64, 0)
+scale = Vector2(25.36, 1)
 reverse = true
 max_speed = 50.0
 force = 50.0
@@ -198,6 +243,66 @@ force = 50.0
 [node name="Lift" parent="." instance=ExtResource("4_2x4ns")]
 position = Vector2(-72, -56)
 scale = Vector2(1.98683, 5.99489)
+max_speed = 80.0
+force = 1500.0
+
+[node name="Lift2" parent="." instance=ExtResource("4_2x4ns")]
+position = Vector2(80, -116)
+scale = Vector2(1.98683, 5.99489)
+max_speed = 80.0
+force = 1500.0
+
+[node name="Lift5" parent="." instance=ExtResource("4_2x4ns")]
+modulate = Color(0.703893, 0.000812062, 0.779866, 1)
+position = Vector2(-40, -104)
+scale = Vector2(0.38683, 0.274891)
+max_speed = 1000.0
+force = 3000.0
+
+[node name="Lift6" parent="." instance=ExtResource("4_2x4ns")]
+modulate = Color(0.703893, 0.000812062, 0.779866, 1)
+position = Vector2(-32, -132)
+scale = Vector2(0.38683, 0.274891)
+max_speed = 1000.0
+force = 3000.0
+
+[node name="Lift7" parent="." instance=ExtResource("4_2x4ns")]
+modulate = Color(0.703893, 0.000812062, 0.779866, 1)
+position = Vector2(-8, -112)
+scale = Vector2(0.38683, 0.274891)
+max_speed = 1000.0
+force = 3000.0
+
+[node name="Lift8" parent="." instance=ExtResource("4_2x4ns")]
+modulate = Color(0.703893, 0.000812062, 0.779866, 1)
+position = Vector2(14, -124)
+scale = Vector2(0.38683, 0.274891)
+max_speed = 1000.0
+force = 3000.0
+
+[node name="Lift9" parent="." instance=ExtResource("4_2x4ns")]
+modulate = Color(0.703893, 0.000812062, 0.779866, 1)
+position = Vector2(6, -88)
+scale = Vector2(0.38683, 0.274891)
+max_speed = 1000.0
+force = 3000.0
+
+[node name="Lift10" parent="." instance=ExtResource("4_2x4ns")]
+modulate = Color(0.703893, 0.000812062, 0.779866, 1)
+position = Vector2(28, -140)
+scale = Vector2(0.38683, 0.274891)
+max_speed = 1000.0
+force = 3000.0
+
+[node name="Lift3" parent="." instance=ExtResource("4_2x4ns")]
+position = Vector2(2, -32)
+scale = Vector2(3.81697, 3.13631)
+max_speed = 80.0
+force = 1500.0
+
+[node name="Lift4" parent="." instance=ExtResource("4_2x4ns")]
+position = Vector2(144, -32)
+scale = Vector2(3.81697, 3.13631)
 max_speed = 80.0
 force = 1500.0
 
