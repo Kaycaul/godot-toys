@@ -12,6 +12,11 @@ bounce = 0.65
 
 [node name="Factory" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(69, -86)
+offset = Vector2(-0.445, 0)
+zoom = Vector2(3.16, 3.16)
+
 [node name="walls" type="Node2D" parent="."]
 
 [node name="Wall3" parent="walls" instance=ExtResource("1_oqff4")]
@@ -72,19 +77,6 @@ position = Vector2(-32, -136)
 mass = 1.438
 physics_material_override = SubResource("PhysicsMaterial_2x4ns")
 
-[node name="prop3" parent="props" instance=ExtResource("2_gcd8h")]
-position = Vector2(-40, -120)
-physics_material_override = SubResource("PhysicsMaterial_2x4ns")
-
-[node name="CollisionShape2D" parent="props/prop3" index="0"]
-scale = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" parent="props/prop3" index="1"]
-scale = Vector2(0.063, 0.063)
-
-[node name="Camera2D" type="Camera2D" parent="props/prop3"]
-zoom = Vector2(13.375, 13.375)
-
 [node name="prop4" parent="props" instance=ExtResource("2_gcd8h")]
 position = Vector2(10, -144)
 physics_material_override = SubResource("PhysicsMaterial_2x4ns")
@@ -93,16 +85,6 @@ physics_material_override = SubResource("PhysicsMaterial_2x4ns")
 scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" parent="props/prop4" index="1"]
-scale = Vector2(0.063, 0.063)
-
-[node name="prop5" parent="props" instance=ExtResource("2_gcd8h")]
-position = Vector2(16, -120)
-physics_material_override = SubResource("PhysicsMaterial_2x4ns")
-
-[node name="CollisionShape2D" parent="props/prop5" index="0"]
-scale = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" parent="props/prop5" index="1"]
 scale = Vector2(0.063, 0.063)
 
 [node name="prop6" parent="props" instance=ExtResource("2_gcd8h")]
@@ -115,36 +97,6 @@ scale = Vector2(0.5, 0.5)
 [node name="Sprite2D" parent="props/prop6" index="1"]
 scale = Vector2(0.063, 0.063)
 
-[node name="prop7" parent="props" instance=ExtResource("2_gcd8h")]
-position = Vector2(40, -140)
-physics_material_override = SubResource("PhysicsMaterial_2x4ns")
-
-[node name="CollisionShape2D" parent="props/prop7" index="0"]
-scale = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" parent="props/prop7" index="1"]
-scale = Vector2(0.063, 0.063)
-
-[node name="prop8" parent="props" instance=ExtResource("2_gcd8h")]
-position = Vector2(48, -116)
-physics_material_override = SubResource("PhysicsMaterial_2x4ns")
-
-[node name="CollisionShape2D" parent="props/prop8" index="0"]
-scale = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" parent="props/prop8" index="1"]
-scale = Vector2(0.063, 0.063)
-
-[node name="prop9" parent="props" instance=ExtResource("2_gcd8h")]
-position = Vector2(36, -120)
-physics_material_override = SubResource("PhysicsMaterial_2x4ns")
-
-[node name="CollisionShape2D" parent="props/prop9" index="0"]
-scale = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" parent="props/prop9" index="1"]
-scale = Vector2(0.063, 0.063)
-
 [node name="prop10" parent="props" instance=ExtResource("2_gcd8h")]
 position = Vector2(32, -136)
 physics_material_override = SubResource("PhysicsMaterial_2x4ns")
@@ -155,16 +107,6 @@ scale = Vector2(0.5, 0.5)
 [node name="Sprite2D" parent="props/prop10" index="1"]
 scale = Vector2(0.063, 0.063)
 
-[node name="prop11" parent="props" instance=ExtResource("2_gcd8h")]
-position = Vector2(16, -140)
-physics_material_override = SubResource("PhysicsMaterial_2x4ns")
-
-[node name="CollisionShape2D" parent="props/prop11" index="0"]
-scale = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" parent="props/prop11" index="1"]
-scale = Vector2(0.063, 0.063)
-
 [node name="prop12" parent="props" instance=ExtResource("2_gcd8h")]
 position = Vector2(-8, -140)
 physics_material_override = SubResource("PhysicsMaterial_2x4ns")
@@ -173,26 +115,6 @@ physics_material_override = SubResource("PhysicsMaterial_2x4ns")
 scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" parent="props/prop12" index="1"]
-scale = Vector2(0.063, 0.063)
-
-[node name="prop13" parent="props" instance=ExtResource("2_gcd8h")]
-position = Vector2(-16, -160)
-physics_material_override = SubResource("PhysicsMaterial_2x4ns")
-
-[node name="CollisionShape2D" parent="props/prop13" index="0"]
-scale = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" parent="props/prop13" index="1"]
-scale = Vector2(0.063, 0.063)
-
-[node name="prop14" parent="props" instance=ExtResource("2_gcd8h")]
-position = Vector2(2, -168)
-physics_material_override = SubResource("PhysicsMaterial_2x4ns")
-
-[node name="CollisionShape2D" parent="props/prop14" index="0"]
-scale = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" parent="props/prop14" index="1"]
 scale = Vector2(0.063, 0.063)
 
 [node name="Belt" parent="." instance=ExtResource("3_sh5dn")]
@@ -307,15 +229,7 @@ max_speed = 80.0
 force = 1500.0
 
 [editable path="props/prop"]
-[editable path="props/prop3"]
 [editable path="props/prop4"]
-[editable path="props/prop5"]
 [editable path="props/prop6"]
-[editable path="props/prop7"]
-[editable path="props/prop8"]
-[editable path="props/prop9"]
 [editable path="props/prop10"]
-[editable path="props/prop11"]
 [editable path="props/prop12"]
-[editable path="props/prop13"]
-[editable path="props/prop14"]

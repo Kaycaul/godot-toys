@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmtd2pu104yfg"]
+[gd_scene load_steps=5 format=3 uid="uid://bmtd2pu104yfg"]
 
 [ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://common assets/sneakers.png" id="1_b1dhs"]
+[ext_resource type="Script" uid="uid://bfdbejasyiy1y" path="res://factory/scenes/prop.gd" id="1_uqp76"]
+[ext_resource type="AudioStream" uid="uid://bewi43oh6awgf" path="res://common assets/pop.wav" id="3_vcmhk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oqff4"]
 size = Vector2(16, 16)
 
 [node name="prop" type="RigidBody2D"]
+contact_monitor = true
+max_contacts_reported = 5
+script = ExtResource("1_uqp76")
+min_bonk_volume = -12.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_oqff4")
@@ -13,3 +19,10 @@ shape = SubResource("RectangleShape2D_oqff4")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("1_b1dhs")
+
+[node name="bonk" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_vcmhk")
+max_polyphony = 10
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
