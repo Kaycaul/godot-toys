@@ -229,6 +229,7 @@ max_speed = 80.0
 force = 1500.0
 
 [editable path="props/prop"]
+[editable path="props/prop2"]
 [editable path="props/prop4"]
 [editable path="props/prop6"]
 [editable path="props/prop10"]
