@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://gholq7tb3nrv"]
+
+[ext_resource type="PackedScene" uid="uid://cn2mmh1ntdjef" path="res://bouncy_guy/bouncy_guy.tscn" id="1_lpna0"]
+
+[node name="Bouncy" type="Node2D"]
+
+[node name="BouncyGuy" parent="." instance=ExtResource("1_lpna0")]
