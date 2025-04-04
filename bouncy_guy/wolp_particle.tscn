@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl35vab8dlcdw"]
+
+[ext_resource type="Texture2D" uid="uid://c2ej4httw3scb" path="res://common assets/wolp.png" id="1_u6pyx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6pyx"]
+size = Vector2(16, 16)
+
+[node name="WolpParticle" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u6pyx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.6533e-07, 7.65331e-07)
+scale = Vector2(0.0250783, 0.0250784)
+texture = ExtResource("1_u6pyx")

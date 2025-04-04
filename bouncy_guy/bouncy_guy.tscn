@@ -1,13 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://cn2mmh1ntdjef"]
+[gd_scene load_steps=5 format=3 uid="uid://cn2mmh1ntdjef"]
 
 [ext_resource type="Texture2D" uid="uid://c2ej4httw3scb" path="res://common assets/wolp.png" id="1_bmoeb"]
 [ext_resource type="Script" uid="uid://cxoqo7flhkm7u" path="res://bouncy_guy/bouncy_guy.gd" id="1_fvst7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fvst7"]
+friction = 0.61
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmoeb"]
 size = Vector2(32, 32)
 
 [node name="BouncyGuy" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_fvst7")
+gravity_scale = 0.0
+linear_damp = 7.325
 script = ExtResource("1_fvst7")
+move_force = 200.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bmoeb")

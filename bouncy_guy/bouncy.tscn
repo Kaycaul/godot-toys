@@ -1,7 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://gholq7tb3nrv"]
+[gd_scene load_steps=3 format=3 uid="uid://gholq7tb3nrv"]
 
 [ext_resource type="PackedScene" uid="uid://cn2mmh1ntdjef" path="res://bouncy_guy/bouncy_guy.tscn" id="1_lpna0"]
+[ext_resource type="PackedScene" uid="uid://bcvnomaj5ycm3" path="res://factory/scenes/wall.tscn" id="2_eb4k5"]
 
 [node name="Bouncy" type="Node2D"]
 
 [node name="BouncyGuy" parent="." instance=ExtResource("1_lpna0")]
+lock_rotation = true
+continuous_cd = 2
+linear_damp = 27.207
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.565, 2.565)
+
+[node name="Wall" parent="." instance=ExtResource("2_eb4k5")]
+position = Vector2(-80, 8)
+scale = Vector2(1, 8.92)
