@@ -10,8 +10,8 @@ lock_rotation = true
 continuous_cd = 2
 linear_damp = 27.207
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.565, 2.565)
+[node name="Camera2D" type="Camera2D" parent="BouncyGuy"]
+zoom = Vector2(0.835, 0.835)
 
 [node name="Wall" parent="." instance=ExtResource("2_eb4k5")]
 position = Vector2(-80, 8)

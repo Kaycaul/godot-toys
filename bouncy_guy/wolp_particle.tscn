@@ -1,17 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://cl35vab8dlcdw"]
+[gd_scene load_steps=5 format=3 uid="uid://cl35vab8dlcdw"]
 
-[ext_resource type="Texture2D" uid="uid://c2ej4httw3scb" path="res://common assets/wolp.png" id="1_u6pyx"]
+[ext_resource type="Script" uid="uid://ck8vjkmsslt4t" path="res://bouncy_guy/wolp_particle.gd" id="1_luwga"]
+[ext_resource type="Texture2D" uid="uid://b28bh1ibgki1l" path="res://common assets/despair.png" id="1_u6pyx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6pyx"]
 size = Vector2(16, 16)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_u6pyx"]
+radius = 392.326
+
 [node name="WolpParticle" type="RigidBody2D"]
+z_index = -1
+collision_mask = 7
 gravity_scale = 0.0
+script = ExtResource("1_luwga")
+gravity_force = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_u6pyx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(7.6533e-07, 7.65331e-07)
-scale = Vector2(0.0250783, 0.0250784)
+position = Vector2(0, 7.15256e-07)
+scale = Vector2(0.125, 0.125)
 texture = ExtResource("1_u6pyx")
+
+[node name="gravity" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gravity"]
+shape = SubResource("CircleShape2D_u6pyx")
