@@ -11,7 +11,7 @@ size = Vector2(32, 32)
 
 [node name="BouncyGuy" type="RigidBody2D"]
 collision_layer = 4
-collision_mask = 7
+collision_mask = 6
 physics_material_override = SubResource("PhysicsMaterial_fvst7")
 gravity_scale = 0.0
 linear_damp = 7.325

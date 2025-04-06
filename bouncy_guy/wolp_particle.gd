@@ -9,4 +9,7 @@ func _physics_process(_delta: float) -> void:
 	for thing : RigidBody2D in collided_things:
 		var dist : Vector2 = thing.position - position
 		var dir : Vector2 = dist.normalized()
-		thing.apply_force(dir * -gravity_force)
+		var radius : float = %gravityCollider.shape.radius
+		var dist_percent = dist.length() / radius
+		dist_percent = 1 - clampf(dist_percent, 0.0, 1.0)
+		thing.apply_force(dir * -gravity_force * dist_percent)

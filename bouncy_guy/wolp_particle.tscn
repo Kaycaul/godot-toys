@@ -7,14 +7,14 @@
 size = Vector2(16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u6pyx"]
-radius = 392.326
+radius = 160.2
 
 [node name="WolpParticle" type="RigidBody2D"]
 z_index = -1
-collision_mask = 7
+collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_luwga")
-gravity_force = 10.0
+gravity_force = 300.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_u6pyx")
@@ -27,5 +27,6 @@ texture = ExtResource("1_u6pyx")
 [node name="gravity" type="Area2D" parent="."]
 unique_name_in_owner = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="gravity"]
+[node name="gravityCollider" type="CollisionShape2D" parent="gravity"]
+unique_name_in_owner = true
 shape = SubResource("CircleShape2D_u6pyx")

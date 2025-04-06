@@ -11,7 +11,7 @@ continuous_cd = 2
 linear_damp = 27.207
 
 [node name="Camera2D" type="Camera2D" parent="BouncyGuy"]
-zoom = Vector2(0.835, 0.835)
+zoom = Vector2(1.14, 1.14)
 
 [node name="Wall" parent="." instance=ExtResource("2_eb4k5")]
 position = Vector2(-80, 8)

@@ -10,7 +10,7 @@ func _process(_delta: float) -> void:
 
 func explode() -> void:
 	if Input.is_physical_key_pressed(KEY_SPACE):
-		spawn_friends(5)
+		spawn_friend()
 
 func spawn_friend() -> void:
 	var new_guy : RigidBody2D = wolp_particle.instantiate()
