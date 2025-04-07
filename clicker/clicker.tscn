@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmxq83dycxhcp"]
+
+[ext_resource type="PackedScene" uid="uid://bf2vf64yvs35k" path="res://clicker/spawner.tscn" id="1_rkvag"]
+[ext_resource type="PackedScene" uid="uid://dko6my4jsl3sp" path="res://clicker/conveyor.tscn" id="2_rkvag"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4kctr"]
+normal = Vector2(1, 0)
+
+[node name="Clicker" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Spawner" parent="." instance=ExtResource("1_rkvag")]
+
+[node name="World walls" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World walls"]
+position = Vector2(-576, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World walls/StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_4kctr")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="World walls"]
+position = Vector2(576, 0)
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World walls/StaticBody2D2"]
+shape = SubResource("WorldBoundaryShape2D_4kctr")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="World walls"]
+position = Vector2(0, -324)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World walls/StaticBody2D3"]
+shape = SubResource("WorldBoundaryShape2D_4kctr")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="World walls"]
+position = Vector2(0, 324)
+rotation = -1.57079
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World walls/StaticBody2D4"]
+shape = SubResource("WorldBoundaryShape2D_4kctr")
+
+[node name="Belts" type="Node2D" parent="."]
+
+[node name="Belt" parent="Belts" instance=ExtResource("2_rkvag")]
+position = Vector2(8, 144)
+scale = Vector2(17.2, 1)
+
+[node name="hud" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="hud"]
+offset_left = 936.0
+offset_top = 152.0
+offset_right = 1102.0
+offset_bottom = 183.0
+text = "click to spawn a guy "
+
+[connection signal="pressed" from="hud/Button" to="Spawner" method="spawn_box"]
