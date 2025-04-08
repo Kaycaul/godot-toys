@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmxq83dycxhcp"]
+[gd_scene load_steps=6 format=3 uid="uid://dmxq83dycxhcp"]
 
 [ext_resource type="PackedScene" uid="uid://bf2vf64yvs35k" path="res://clicker/spawner.tscn" id="1_rkvag"]
+[ext_resource type="PackedScene" uid="uid://bbwij2uylri04" path="res://clicker/collector.tscn" id="2_lkaxs"]
 [ext_resource type="PackedScene" uid="uid://dko6my4jsl3sp" path="res://clicker/conveyor.tscn" id="2_rkvag"]
+[ext_resource type="Script" uid="uid://0570f1jh4au6" path="res://clicker/hud.gd" id="3_1708s"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4kctr"]
 normal = Vector2(1, 0)
@@ -10,12 +12,25 @@ normal = Vector2(1, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Spawner" parent="." instance=ExtResource("1_rkvag")]
+[node name="Manual Spawner" parent="." instance=ExtResource("1_rkvag")]
+position = Vector2(-496, -224)
+
+[node name="Periodic Spawner" parent="." instance=ExtResource("1_rkvag")]
+position = Vector2(184, -232)
+
+[node name="Periodic Spawner Timer" type="Timer" parent="Periodic Spawner"]
+wait_time = 0.2
+
+[node name="Collector" parent="." instance=ExtResource("2_lkaxs")]
+position = Vector2(320, 320)
+scale = Vector2(26.2066, 3.44424)
 
 [node name="World walls" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="World walls"]
 position = Vector2(-576, 0)
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World walls/StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_4kctr")
@@ -23,6 +38,8 @@ shape = SubResource("WorldBoundaryShape2D_4kctr")
 [node name="StaticBody2D2" type="StaticBody2D" parent="World walls"]
 position = Vector2(576, 0)
 rotation = -3.14159
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World walls/StaticBody2D2"]
 shape = SubResource("WorldBoundaryShape2D_4kctr")
@@ -30,6 +47,8 @@ shape = SubResource("WorldBoundaryShape2D_4kctr")
 [node name="StaticBody2D3" type="StaticBody2D" parent="World walls"]
 position = Vector2(0, -324)
 rotation = 1.5708
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World walls/StaticBody2D3"]
 shape = SubResource("WorldBoundaryShape2D_4kctr")
@@ -37,6 +56,8 @@ shape = SubResource("WorldBoundaryShape2D_4kctr")
 [node name="StaticBody2D4" type="StaticBody2D" parent="World walls"]
 position = Vector2(0, 324)
 rotation = -1.57079
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World walls/StaticBody2D4"]
 shape = SubResource("WorldBoundaryShape2D_4kctr")
@@ -44,16 +65,52 @@ shape = SubResource("WorldBoundaryShape2D_4kctr")
 [node name="Belts" type="Node2D" parent="."]
 
 [node name="Belt" parent="Belts" instance=ExtResource("2_rkvag")]
-position = Vector2(8, 144)
-scale = Vector2(17.2, 1)
+position = Vector2(-136, -104)
+scale = Vector2(53.08, 1)
+max_speed = 500.0
+force = 1200.0
+
+[node name="Belt2" parent="Belts" instance=ExtResource("2_rkvag")]
+position = Vector2(136, 32)
+scale = Vector2(53.08, 1)
+reverse = true
+max_speed = 500.0
+force = 1200.0
+
+[node name="Belt3" parent="Belts" instance=ExtResource("2_rkvag")]
+position = Vector2(-136, 192)
+scale = Vector2(53.08, 1)
+max_speed = 500.0
+force = 1200.0
 
 [node name="hud" type="CanvasLayer" parent="."]
+script = ExtResource("3_1708s")
 
-[node name="Button" type="Button" parent="hud"]
-offset_left = 936.0
-offset_top = 152.0
-offset_right = 1102.0
-offset_bottom = 183.0
+[node name="Spawn button" type="Button" parent="hud"]
+offset_left = 160.0
+offset_top = 80.0
+offset_right = 326.0
+offset_bottom = 111.0
 text = "click to spawn a guy "
 
-[connection signal="pressed" from="hud/Button" to="Spawner" method="spawn_box"]
+[node name="purchase spawner" type="Button" parent="hud"]
+unique_name_in_owner = true
+offset_left = 392.0
+offset_top = 72.0
+offset_right = 629.0
+offset_bottom = 103.0
+text = "purchase wega machine ($50)"
+
+[node name="money counter" type="Label" parent="hud"]
+unique_name_in_owner = true
+offset_left = 160.0
+offset_top = 48.0
+offset_right = 343.0
+offset_bottom = 71.0
+text = "Money placeholder text"
+
+[connection signal="timeout" from="Periodic Spawner/Periodic Spawner Timer" to="Periodic Spawner" method="spawn_box"]
+[connection signal="thing_collected" from="Collector" to="hud" method="gain_point"]
+[connection signal="on_spawner_purchase" from="hud" to="Periodic Spawner/Periodic Spawner Timer" method="start"]
+[connection signal="pressed" from="hud/Spawn button" to="Manual Spawner" method="spawn_box"]
+[connection signal="pressed" from="hud/purchase spawner" to="hud" method="attempt_spawner_purchase"]

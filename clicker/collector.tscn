@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbwij2uylri04"]
+
+[ext_resource type="Script" uid="uid://b6lupsbmw6j7d" path="res://clicker/collector.gd" id="1_mfxft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikknu"]
+
+[node name="Collector" type="Area2D"]
+script = ExtResource("1_mfxft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ikknu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
