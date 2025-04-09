@@ -18,3 +18,6 @@ func _process(delta: float) -> void:
 		# apply acceleration
 		var dir := -1 if reverse else 1
 		rb.apply_impulse(Vector2(force * delta * dir, 0.0))
+
+func set_force(new_force : int) -> void:
+	force = new_force

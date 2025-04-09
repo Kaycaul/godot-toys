@@ -16,7 +16,7 @@ normal = Vector2(1, 0)
 position = Vector2(-496, -224)
 
 [node name="Periodic Spawner" parent="." instance=ExtResource("1_rkvag")]
-position = Vector2(184, -232)
+position = Vector2(-336, -264)
 
 [node name="Periodic Spawner Timer" type="Timer" parent="Periodic Spawner"]
 wait_time = 0.2
@@ -93,6 +93,14 @@ offset_right = 326.0
 offset_bottom = 111.0
 text = "click to spawn a guy "
 
+[node name="faster button" type="Button" parent="hud"]
+unique_name_in_owner = true
+offset_left = 584.0
+offset_top = 16.0
+offset_right = 750.0
+offset_bottom = 47.0
+text = "FASTER ($10)"
+
 [node name="purchase spawner" type="Button" parent="hud"]
 unique_name_in_owner = true
 offset_left = 392.0
@@ -111,6 +119,10 @@ text = "Money placeholder text"
 
 [connection signal="timeout" from="Periodic Spawner/Periodic Spawner Timer" to="Periodic Spawner" method="spawn_box"]
 [connection signal="thing_collected" from="Collector" to="hud" method="gain_point"]
+[connection signal="on_new_belt_speed" from="hud" to="Belts/Belt" method="set_force"]
+[connection signal="on_new_belt_speed" from="hud" to="Belts/Belt2" method="set_force"]
+[connection signal="on_new_belt_speed" from="hud" to="Belts/Belt3" method="set_force"]
 [connection signal="on_spawner_purchase" from="hud" to="Periodic Spawner/Periodic Spawner Timer" method="start"]
 [connection signal="pressed" from="hud/Spawn button" to="Manual Spawner" method="spawn_box"]
+[connection signal="pressed" from="hud/faster button" to="hud" method="attempt_speed_increase"]
 [connection signal="pressed" from="hud/purchase spawner" to="hud" method="attempt_spawner_purchase"]
