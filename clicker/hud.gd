@@ -3,13 +3,20 @@ extends CanvasLayer
 @onready var money_label : Label = %"money counter"
 @onready var purchase_spawner_button : Button = %"purchase spawner"
 @onready var faster_button : Button = %"faster button"
+@onready var gravity_button : Button = %"gravity button"
 
 signal on_spawner_purchase
 signal on_new_belt_speed(new_speed : int)
+signal on_new_gravity(new_gravity : int)
 
 var wega_cash := 0
 var curent_force := 1200
-var speed_increase_cost := 10
+var speed_increase_cost : int = 10
+var gravity_increase_cost : int = 25
+var current_wega_gravity : float = 1.0
+
+func _ready() -> void:
+	update_gravity_button_text()
 
 func gain_points(points : int) -> void:
 	wega_cash += points
@@ -28,6 +35,20 @@ func attempt_speed_increase() -> void:
 	if wega_cash < speed_increase_cost: return
 	gain_points(-speed_increase_cost)
 	curent_force *= 2
-	speed_increase_cost *= 1.5
+	speed_increase_cost = (int)(1.5 * speed_increase_cost)
 	faster_button.text = "FASTER ($" + str(speed_increase_cost) + ")"
 	on_new_belt_speed.emit(curent_force)
+
+func attempt_gravity_increase() -> void:
+	if wega_cash < gravity_increase_cost: return
+	gain_points(-gravity_increase_cost)
+	current_wega_gravity *= 2
+	gravity_increase_cost = (int)(1.5 * gravity_increase_cost)
+	update_gravity_button_text()
+	on_new_gravity.emit(current_wega_gravity)
+
+func update_gravity_button_text() -> void:
+	gravity_button.text = "GRAVITY UP ($" + str(gravity_increase_cost) + ")"
+
+func set_gravity_of_wega(wega : RigidBody2D) -> void:
+	wega.gravity_scale = current_wega_gravity

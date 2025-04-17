@@ -101,6 +101,14 @@ offset_right = 750.0
 offset_bottom = 47.0
 text = "FASTER ($10)"
 
+[node name="gravity button" type="Button" parent="hud"]
+unique_name_in_owner = true
+offset_left = 760.0
+offset_top = 16.0
+offset_right = 926.0
+offset_bottom = 47.0
+text = "grrravity placeholde"
+
 [node name="purchase spawner" type="Button" parent="hud"]
 unique_name_in_owner = true
 offset_left = 392.0
@@ -117,6 +125,8 @@ offset_right = 343.0
 offset_bottom = 71.0
 text = "Money placeholder text"
 
+[connection signal="box_spawned" from="Manual Spawner" to="hud" method="set_gravity_of_wega"]
+[connection signal="box_spawned" from="Periodic Spawner" to="hud" method="set_gravity_of_wega"]
 [connection signal="timeout" from="Periodic Spawner/Periodic Spawner Timer" to="Periodic Spawner" method="spawn_box"]
 [connection signal="thing_collected" from="Collector" to="hud" method="gain_point"]
 [connection signal="on_new_belt_speed" from="hud" to="Belts/Belt" method="set_force"]
@@ -125,4 +135,5 @@ text = "Money placeholder text"
 [connection signal="on_spawner_purchase" from="hud" to="Periodic Spawner/Periodic Spawner Timer" method="start"]
 [connection signal="pressed" from="hud/Spawn button" to="Manual Spawner" method="spawn_box"]
 [connection signal="pressed" from="hud/faster button" to="hud" method="attempt_speed_increase"]
+[connection signal="pressed" from="hud/gravity button" to="hud" method="attempt_gravity_increase"]
 [connection signal="pressed" from="hud/purchase spawner" to="hud" method="attempt_spawner_purchase"]
