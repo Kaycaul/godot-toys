@@ -4,6 +4,7 @@ extends CanvasLayer
 @onready var purchase_spawner_button : Button = %"purchase spawner"
 @onready var faster_button : Button = %"faster button"
 @onready var gravity_button : Button = %"gravity button"
+@onready var cheat_button : Button = %"cheat button"
 
 signal on_spawner_purchase
 signal on_new_belt_speed(new_speed : int)
@@ -52,3 +53,11 @@ func update_gravity_button_text() -> void:
 
 func set_gravity_of_wega(wega : RigidBody2D) -> void:
 	wega.gravity_scale = current_wega_gravity
+
+func set_speed_fast_cheat() -> void:
+	Engine.time_scale = 4.0
+	Engine.physics_ticks_per_second = 240
+
+func set_speed_normal_cheat() -> void:
+	Engine.time_scale = 1.0
+	Engine.physics_ticks_per_second = 60

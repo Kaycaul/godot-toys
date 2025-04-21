@@ -109,6 +109,14 @@ offset_right = 926.0
 offset_bottom = 47.0
 text = "grrravity placeholde"
 
+[node name="cheat button" type="Button" parent="hud"]
+unique_name_in_owner = true
+offset_left = 8.0
+offset_top = 592.0
+offset_right = 174.0
+offset_bottom = 623.0
+text = "faster time cheat lol"
+
 [node name="purchase spawner" type="Button" parent="hud"]
 unique_name_in_owner = true
 offset_left = 392.0
@@ -136,4 +144,6 @@ text = "Money placeholder text"
 [connection signal="pressed" from="hud/Spawn button" to="Manual Spawner" method="spawn_box"]
 [connection signal="pressed" from="hud/faster button" to="hud" method="attempt_speed_increase"]
 [connection signal="pressed" from="hud/gravity button" to="hud" method="attempt_gravity_increase"]
+[connection signal="button_down" from="hud/cheat button" to="hud" method="set_speed_fast_cheat"]
+[connection signal="button_up" from="hud/cheat button" to="hud" method="set_speed_normal_cheat"]
 [connection signal="pressed" from="hud/purchase spawner" to="hud" method="attempt_spawner_purchase"]
