@@ -140,6 +140,8 @@ text = "Money placeholder text"
 [connection signal="on_new_belt_speed" from="hud" to="Belts/Belt" method="set_force"]
 [connection signal="on_new_belt_speed" from="hud" to="Belts/Belt2" method="set_force"]
 [connection signal="on_new_belt_speed" from="hud" to="Belts/Belt3" method="set_force"]
+[connection signal="on_new_spawner_wait_time" from="hud" to="Periodic Spawner/Periodic Spawner Timer" method="set_wait_time"]
+[connection signal="on_new_spawner_wait_time" from="hud" to="hud" method="update_speed_up_button_label" unbinds=1]
 [connection signal="on_spawner_purchase" from="hud" to="Periodic Spawner/Periodic Spawner Timer" method="start"]
 [connection signal="pressed" from="hud/Spawn button" to="Manual Spawner" method="spawn_box"]
 [connection signal="pressed" from="hud/faster button" to="hud" method="attempt_speed_increase"]

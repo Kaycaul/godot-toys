@@ -7,6 +7,7 @@ extends CanvasLayer
 @onready var cheat_button : Button = %"cheat button"
 
 signal on_spawner_purchase
+signal on_new_spawner_wait_time(new_wait_time : float)
 signal on_new_belt_speed(new_speed : int)
 signal on_new_gravity(new_gravity : int)
 
@@ -15,6 +16,9 @@ var curent_force := 1200
 var speed_increase_cost : int = 10
 var gravity_increase_cost : int = 25
 var current_wega_gravity : float = 1.0
+var spawner_purchased := false
+var spawn_speed_increase_cost := 50
+var spawner_wait_time := 0.2
 
 func _ready() -> void:
 	update_gravity_button_text()
@@ -26,11 +30,29 @@ func gain_points(points : int) -> void:
 func gain_point() -> void:
 	gain_points(1)
 
+## called by clicking the button, after purchasing just speeds it up
 func attempt_spawner_purchase() -> void:
+	if not spawner_purchased:
+		purchase_spawner()
+	else:
+		attempt_spawner_speed_increase()
+
+func purchase_spawner() -> void:
 	if wega_cash < 50: return
+	spawner_purchased = true
 	gain_points(-50)
-	purchase_spawner_button.queue_free()
 	on_spawner_purchase.emit()
+	on_new_spawner_wait_time.emit(spawner_wait_time)
+
+func attempt_spawner_speed_increase() -> void:
+	if wega_cash < spawn_speed_increase_cost: return
+	gain_points(-spawn_speed_increase_cost)
+	spawner_wait_time *= 0.5
+	spawn_speed_increase_cost = (int)(1.5 * spawn_speed_increase_cost)
+	on_new_spawner_wait_time.emit(spawner_wait_time)
+
+func update_speed_up_button_label() -> void:
+	purchase_spawner_button.text = "SPAWN MORE!! ($" + str(spawn_speed_increase_cost) + ")"
 
 func attempt_speed_increase() -> void:
 	if wega_cash < speed_increase_cost: return
