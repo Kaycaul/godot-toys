@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://02awdso6dwyt"]
+
+[ext_resource type="Script" uid="uid://dlml6rbfuayx3" path="res://gambling/me.gd" id="1_28ix7"]
+[ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://common assets/sneakers.png" id="1_e56q8"]
+[ext_resource type="Texture2D" uid="uid://0k4cauj0jfmc" path="res://common assets/soup.png" id="2_dcwfh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28ix7"]
+size = Vector2(240, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcwfh"]
+size = Vector2(64, 64)
+
+[node name="Gambling" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Soup" type="Sprite2D" parent="Area2D"]
+position = Vector2(656, 104)
+scale = Vector2(0.352941, 0.188235)
+texture = ExtResource("2_dcwfh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(656, 104)
+shape = SubResource("RectangleShape2D_28ix7")
+
+[node name="me" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 10.0
+script = ExtResource("1_28ix7")
+move_force = 100.0
+
+[node name="Sneakers" type="Sprite2D" parent="me"]
+position = Vector2(72, 72)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_e56q8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="me"]
+position = Vector2(72, 72)
+shape = SubResource("RectangleShape2D_dcwfh")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 200.0
+offset_top = 272.0
+offset_right = 424.0
+offset_bottom = 344.0
+text = "YOU GOT THE SOUP!!!!! !!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 152.0
+offset_top = 16.0
+offset_right = 333.0
+offset_bottom = 65.0
+text = "can you beat my puzzle
+?"
+
+[connection signal="body_entered" from="Area2D" to="Label" method="show" unbinds=1]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="queue_free" unbinds=1]
+[connection signal="body_entered" from="Area2D" to="Label2" method="hide" unbinds=1]
