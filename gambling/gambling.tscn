@@ -1,15 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://02awdso6dwyt"]
+[gd_scene load_steps=9 format=3 uid="uid://02awdso6dwyt"]
 
 [ext_resource type="Script" uid="uid://dlml6rbfuayx3" path="res://gambling/me.gd" id="1_28ix7"]
 [ext_resource type="Script" uid="uid://gwfsewtyrrfq" path="res://gambling/soup.gd" id="1_bdy0l"]
 [ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://common assets/sneakers.png" id="1_e56q8"]
 [ext_resource type="Texture2D" uid="uid://0k4cauj0jfmc" path="res://common assets/soup.png" id="2_dcwfh"]
+[ext_resource type="Shader" uid="uid://btvhoghirc1qi" path="res://gambling/player.gdshader" id="4_h5b5r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_28ix7"]
 size = Vector2(240, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcwfh"]
 size = Vector2(64, 64)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_adgws"]
+shader = ExtResource("4_h5b5r")
 
 [node name="Gambling" type="Node2D"]
 
@@ -42,6 +46,7 @@ position = Vector2(72, 72)
 shape = SubResource("RectangleShape2D_dcwfh")
 
 [node name="Sneakers" type="Sprite2D" parent="me"]
+material = SubResource("ShaderMaterial_adgws")
 position = Vector2(72, 72)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_e56q8")
