@@ -1,4 +1,6 @@
 shader_type canvas_item;
+uniform vec2 wave_offset;
+uniform float red_amount = 1.0;
 
 void vertex() {
 	// Called for every vertex the material is visible on.
@@ -7,9 +9,9 @@ void vertex() {
 void fragment() {
 	vec4 texture = texture(TEXTURE, UV);
 	float luminosity = texture.r * 0.299 + texture.g * 0.587 + texture.b * 0.114;
-	COLOR = vec4(luminosity, 0.0, (1.0 - luminosity), 1.0);
-	COLOR += sin(UV.x * PI * 5.0) * 0.2;
-	COLOR += sin(UV.y * PI * 5.0) * 0.2;
+	COLOR = vec4(luminosity * red_amount, luminosity * (1.0 - red_amount), (1.0 - luminosity), 1.0);
+	COLOR += sin(UV.x * PI * 5.0 + wave_offset.x) * 0.2;
+	COLOR += sin(UV.y * PI * 5.0 + wave_offset.y) * 0.2;
 }
 
 //void light() {

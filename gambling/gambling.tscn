@@ -14,6 +14,8 @@ size = Vector2(64, 64)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_adgws"]
 shader = ExtResource("4_h5b5r")
+shader_parameter/wave_offset = Vector2(0, 0)
+shader_parameter/red_amount = 1.0
 
 [node name="Gambling" type="Node2D"]
 
@@ -69,5 +71,6 @@ text = "can you beat my puzzle
 
 [connection signal="body_entered" from="soup" to="soup" method="queue_free" unbinds=1]
 [connection signal="body_entered" from="soup" to="soup" method="spawn_explosion" unbinds=1]
+[connection signal="body_entered" from="soup" to="me" method="become_not_red" unbinds=1]
 [connection signal="body_entered" from="soup" to="Label" method="show" unbinds=1]
 [connection signal="body_entered" from="soup" to="Label2" method="hide" unbinds=1]
