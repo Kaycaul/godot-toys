@@ -1,31 +1,33 @@
 [gd_scene load_steps=18 format=3 uid="uid://02awdso6dwyt"]
 
-[ext_resource type="Script" uid="uid://dlml6rbfuayx3" path="res://gambling/me.gd" id="1_28ix7"]
-[ext_resource type="Script" uid="uid://gwfsewtyrrfq" path="res://gambling/soup.gd" id="1_bdy0l"]
-[ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://common assets/sneakers.png" id="1_e56q8"]
-[ext_resource type="Shader" uid="uid://cly6yb1vlcwxh" path="res://gambling/soup.gdshader" id="2_adgws"]
-[ext_resource type="Texture2D" uid="uid://0k4cauj0jfmc" path="res://common assets/soup.png" id="2_dcwfh"]
-[ext_resource type="Shader" uid="uid://btvhoghirc1qi" path="res://gambling/player.gdshader" id="4_h5b5r"]
-[ext_resource type="Shader" uid="uid://do1vsauhridg7" path="res://gambling/background.gdshader" id="7_8scss"]
-[ext_resource type="Texture2D" uid="uid://b28bh1ibgki1l" path="res://common assets/despair.png" id="8_d1l41"]
+[ext_resource type="Shader" uid="uid://do1vsauhridg7" path="res://shader_test/background.gdshader" id="1_tlotn"]
+[ext_resource type="Texture2D" uid="uid://b28bh1ibgki1l" path="res://common assets/despair.png" id="2_fquaj"]
+[ext_resource type="Script" uid="uid://gwfsewtyrrfq" path="res://shader_test/soup.gd" id="3_r3rv2"]
+[ext_resource type="Shader" uid="uid://cly6yb1vlcwxh" path="res://shader_test/soup.gdshader" id="4_as015"]
+[ext_resource type="Texture2D" uid="uid://0k4cauj0jfmc" path="res://common assets/soup.png" id="5_2hny0"]
+[ext_resource type="Script" uid="uid://dlml6rbfuayx3" path="res://shader_test/me.gd" id="6_7606h"]
+[ext_resource type="Shader" uid="uid://btvhoghirc1qi" path="res://shader_test/player.gdshader" id="7_ft6ek"]
+[ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://common assets/sneakers.png" id="8_cio47"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_d1l41"]
 noise_type = 3
-frequency = 0.0047
+frequency = 0.0157
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_r7y5x"]
 noise = SubResource("FastNoiseLite_d1l41")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d1l41"]
-shader = ExtResource("7_8scss")
+shader = ExtResource("1_tlotn")
 shader_parameter/NOISE_PATTERN = SubResource("NoiseTexture2D_r7y5x")
-shader_parameter/land_threshold = 0.525
+shader_parameter/land_threshold = 0.54
 shader_parameter/beach_threshold = 0.465
 shader_parameter/mountain_threshold = 0.8
 shader_parameter/water_color = Color(0.0225, 0.48325, 0.75, 1)
 shader_parameter/beach_color = Color(1, 0.766667, 0.3, 1)
 shader_parameter/land_color = Color(0.632602, 0.91, 0.3731, 1)
 shader_parameter/mountain_color = Color(0.307667, 0.2652, 0.52, 1)
+shader_parameter/resolution = 700.0
+shader_parameter/blur = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_28ix7"]
 size = Vector2(240, 128)
@@ -38,7 +40,7 @@ frequency = 0.0086
 noise = SubResource("FastNoiseLite_adgws")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8scss"]
-shader = ExtResource("2_adgws")
+shader = ExtResource("4_as015")
 shader_parameter/NOISE_PATTERN = SubResource("NoiseTexture2D_adgws")
 shader_parameter/threshold = 0.355
 
@@ -46,21 +48,21 @@ shader_parameter/threshold = 0.355
 size = Vector2(64, 64)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_adgws"]
-shader = ExtResource("4_h5b5r")
+shader = ExtResource("7_ft6ek")
 shader_parameter/wave_offset = Vector2(0, 0)
 shader_parameter/red_amount = 1.0
 
-[node name="Gambling" type="Node2D"]
+[node name="ShaderTest" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_d1l41")
-position = Vector2(576, 324.5)
-scale = Vector2(9, 5.05469)
-texture = ExtResource("8_d1l41")
+position = Vector2(576, 208)
+scale = Vector2(9.045, 9.045)
+texture = ExtResource("2_fquaj")
 
 [node name="soup" type="Area2D" parent="."]
 position = Vector2(528, 288)
-script = ExtResource("1_bdy0l")
+script = ExtResource("3_r3rv2")
 explosion_particle_count = 300
 explosion_randomness = 0.6
 explosion_particle_lifetime = 0.3
@@ -74,13 +76,13 @@ shape = SubResource("RectangleShape2D_28ix7")
 material = SubResource("ShaderMaterial_8scss")
 position = Vector2(-6.10352e-05, -9.15527e-05)
 scale = Vector2(0.352941, 0.188235)
-texture = ExtResource("2_dcwfh")
+texture = ExtResource("5_2hny0")
 
 [node name="me" type="RigidBody2D" parent="."]
 gravity_scale = 0.0
 lock_rotation = true
 linear_damp = 10.0
-script = ExtResource("1_28ix7")
+script = ExtResource("6_7606h")
 move_force = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="me"]
@@ -91,7 +93,7 @@ shape = SubResource("RectangleShape2D_dcwfh")
 material = SubResource("ShaderMaterial_adgws")
 position = Vector2(72, 72)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_e56q8")
+texture = ExtResource("8_cio47")
 
 [node name="Label" type="Label" parent="."]
 visible = false

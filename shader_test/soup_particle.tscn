@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://03wpfuvr77js"]
 
 [ext_resource type="Texture2D" uid="uid://0k4cauj0jfmc" path="res://common assets/soup.png" id="1_d2e8a"]
-[ext_resource type="Script" uid="uid://bcrn2lx8gertu" path="res://gambling/soup_particle.gd" id="1_l1fvp"]
+[ext_resource type="Script" uid="uid://bcrn2lx8gertu" path="res://shader_test/soup_particle.gd" id="1_l1fvp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2e8a"]
 size = Vector2(32, 32)
