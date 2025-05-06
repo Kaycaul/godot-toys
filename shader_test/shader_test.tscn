@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://02awdso6dwyt"]
+[gd_scene load_steps=22 format=3 uid="uid://02awdso6dwyt"]
 
 [ext_resource type="Shader" uid="uid://do1vsauhridg7" path="res://shader_test/background.gdshader" id="1_tlotn"]
 [ext_resource type="Texture2D" uid="uid://b28bh1ibgki1l" path="res://common assets/despair.png" id="2_fquaj"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dlml6rbfuayx3" path="res://shader_test/me.gd" id="6_7606h"]
 [ext_resource type="Shader" uid="uid://btvhoghirc1qi" path="res://shader_test/player.gdshader" id="7_ft6ek"]
 [ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://common assets/sneakers.png" id="8_cio47"]
+[ext_resource type="Texture2D" uid="uid://c2ej4httw3scb" path="res://common assets/wolp.png" id="9_m6w2e"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_d1l41"]
 noise_type = 3
@@ -52,7 +53,35 @@ shader = ExtResource("7_ft6ek")
 shader_parameter/wave_offset = Vector2(0, 0)
 shader_parameter/red_amount = 1.0
 
+[sub_resource type="Gradient" id="Gradient_qsgyo"]
+offsets = PackedFloat32Array(0.393782, 0.554404, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.301961, 0, 0.811765, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_loto5"]
+gradient = SubResource("Gradient_qsgyo")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8vmw3"]
+particle_flag_disable_z = true
+angle_min = 1.07288e-05
+angle_max = 360.0
+spread = 180.0
+initial_velocity_min = 1000.0
+initial_velocity_max = 1000.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -90.0
+radial_accel_max = -90.0
+damping_min = 7500.0
+damping_max = 7500.0
+scale_min = 0.02
+scale_max = 0.06
+color_ramp = SubResource("GradientTexture1D_loto5")
+turbulence_noise_strength = 11.92
+turbulence_noise_scale = 10.0
+
 [node name="ShaderTest" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(584, 312)
 
 [node name="background" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_d1l41")
@@ -90,10 +119,19 @@ position = Vector2(72, 72)
 shape = SubResource("RectangleShape2D_dcwfh")
 
 [node name="Sneakers" type="Sprite2D" parent="me"]
+z_index = 1
 material = SubResource("ShaderMaterial_adgws")
 position = Vector2(72, 72)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_cio47")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="me/Sneakers"]
+z_index = -1
+scale = Vector2(2, 2)
+amount = 25
+texture = ExtResource("9_m6w2e")
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_8vmw3")
 
 [node name="Label" type="Label" parent="."]
 visible = false
