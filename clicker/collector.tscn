@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbwij2uylri04"]
+[gd_scene load_steps=4 format=3 uid="uid://bbwij2uylri04"]
 
 [ext_resource type="Script" uid="uid://b6lupsbmw6j7d" path="res://clicker/collector.gd" id="1_mfxft"]
+[ext_resource type="AudioStream" uid="uid://5dq5basi4dvr" path="res://common assets/wega.wav" id="2_jiu54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikknu"]
 
@@ -10,4 +11,10 @@ script = ExtResource("1_mfxft")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ikknu")
 
+[node name="Scream Player" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_jiu54")
+volume_db = -26.718
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="thing_collected" from="." to="." method="play_scream_sound"]

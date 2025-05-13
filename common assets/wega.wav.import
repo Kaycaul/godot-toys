@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5dq5basi4dvr"
+path="res://.godot/imported/wega.wav-6b9fbc40fadeaca094449443af7fb22b.sample"
+
+[deps]
+
+source_file="res://common assets/wega.wav"
+dest_files=["res://.godot/imported/wega.wav-6b9fbc40fadeaca094449443af7fb22b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

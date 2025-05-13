@@ -12,7 +12,7 @@
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_d1l41"]
 noise_type = 3
-frequency = 0.0157
+frequency = 0.0108
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_r7y5x"]
 noise = SubResource("FastNoiseLite_d1l41")
@@ -20,14 +20,14 @@ noise = SubResource("FastNoiseLite_d1l41")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d1l41"]
 shader = ExtResource("1_tlotn")
 shader_parameter/NOISE_PATTERN = SubResource("NoiseTexture2D_r7y5x")
-shader_parameter/land_threshold = 0.54
-shader_parameter/beach_threshold = 0.465
-shader_parameter/mountain_threshold = 0.8
+shader_parameter/land_threshold = 0.565
+shader_parameter/beach_threshold = 0.53
+shader_parameter/mountain_threshold = 0.755
 shader_parameter/water_color = Color(0.0225, 0.48325, 0.75, 1)
 shader_parameter/beach_color = Color(1, 0.766667, 0.3, 1)
 shader_parameter/land_color = Color(0.632602, 0.91, 0.3731, 1)
 shader_parameter/mountain_color = Color(0.307667, 0.2652, 0.52, 1)
-shader_parameter/resolution = 700.0
+shader_parameter/resolution = 1000.0
 shader_parameter/blur = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_28ix7"]
