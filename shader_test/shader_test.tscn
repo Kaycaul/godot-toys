@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://02awdso6dwyt"]
+[gd_scene load_steps=25 format=3 uid="uid://02awdso6dwyt"]
 
 [ext_resource type="Shader" uid="uid://do1vsauhridg7" path="res://shader_test/background.gdshader" id="1_tlotn"]
 [ext_resource type="Texture2D" uid="uid://b28bh1ibgki1l" path="res://common assets/despair.png" id="2_fquaj"]
@@ -44,6 +44,34 @@ noise = SubResource("FastNoiseLite_adgws")
 shader = ExtResource("4_as015")
 shader_parameter/NOISE_PATTERN = SubResource("NoiseTexture2D_adgws")
 shader_parameter/threshold = 0.355
+
+[sub_resource type="Curve" id="Curve_m6w2e"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.43379, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_qsgyo"]
+curve = SubResource("Curve_m6w2e")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m6w2e"]
+lifetime_randomness = 0.4
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+angle_min = -180.0
+angle_max = 180.0
+spread = 180.0
+initial_velocity_min = 1565.56
+initial_velocity_max = 2150.0
+gravity = Vector3(0, 0, 0)
+damping_min = 6000.0
+damping_max = 6000.0
+scale_min = 0.09
+scale_max = 0.09
+alpha_curve = SubResource("CurveTexture_qsgyo")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcwfh"]
 size = Vector2(64, 64)
@@ -107,6 +135,15 @@ position = Vector2(-6.10352e-05, -9.15527e-05)
 scale = Vector2(0.352941, 0.188235)
 texture = ExtResource("5_2hny0")
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="soup"]
+scale = Vector2(1.00949, 1.008)
+emitting = false
+amount = 1000
+texture = ExtResource("5_2hny0")
+one_shot = true
+explosiveness = 0.95
+process_material = SubResource("ParticleProcessMaterial_m6w2e")
+
 [node name="me" type="RigidBody2D" parent="."]
 gravity_scale = 0.0
 lock_rotation = true
@@ -149,8 +186,9 @@ offset_bottom = 65.0
 text = "can you beat my puzzle
 ?"
 
-[connection signal="body_entered" from="soup" to="soup" method="queue_free" unbinds=1]
 [connection signal="body_entered" from="soup" to="soup" method="spawn_explosion" unbinds=1]
+[connection signal="body_entered" from="soup" to="soup/CollisionShape2D" method="queue_free" unbinds=1]
+[connection signal="body_entered" from="soup" to="soup/Soup" method="hide" unbinds=1]
 [connection signal="body_entered" from="soup" to="me" method="become_not_red" unbinds=1]
 [connection signal="body_entered" from="soup" to="Label" method="show" unbinds=1]
 [connection signal="body_entered" from="soup" to="Label2" method="hide" unbinds=1]
