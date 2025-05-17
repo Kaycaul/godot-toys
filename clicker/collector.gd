@@ -7,7 +7,7 @@ signal thing_collected
 func _on_body_entered(body: Node2D) -> void:
 	var wega = body as Wega
 	if not wega: return
-	wega.queue_free()
+	wega.on_collect()
 	thing_collected.emit()
 
 func play_scream_sound() -> void:
