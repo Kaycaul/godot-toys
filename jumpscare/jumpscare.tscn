@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://fqhryh58de4g"]
+
+[ext_resource type="PackedScene" uid="uid://fuepbxuyuvks" path="res://jumpscare/sneaks_scare.tscn" id="1_0bytw"]
+[ext_resource type="Script" uid="uid://cyrk7etnrdc61" path="res://jumpscare/jumpscare.gd" id="1_1nfrj"]
+[ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://common assets/sneakers.png" id="2_oojxh"]
+
+[node name="Jumpscare" type="Node2D"]
+script = ExtResource("1_1nfrj")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.678431)
+scale = Vector2(9.13875, 5.19026)
+texture = ExtResource("2_oojxh")
+
+[node name="sneaks_scare" parent="." instance=ExtResource("1_0bytw")]
+unique_name_in_owner = true
+initial_cooldown = 2.1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="space_prompt" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -304.0
+offset_top = 120.0
+offset_right = -127.0
+offset_bottom = 143.0
+scale = Vector2(4.04446, 4.04446)
+text = "AHHH PRESS SPACE"
