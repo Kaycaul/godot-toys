@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://fqhryh58de4g"]
+[gd_scene load_steps=5 format=3 uid="uid://fqhryh58de4g"]
 
 [ext_resource type="PackedScene" uid="uid://fuepbxuyuvks" path="res://jumpscare/sneaks_scare.tscn" id="1_0bytw"]
 [ext_resource type="Script" uid="uid://cyrk7etnrdc61" path="res://jumpscare/jumpscare.gd" id="1_1nfrj"]
 [ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://common assets/sneakers.png" id="2_oojxh"]
+[ext_resource type="PackedScene" uid="uid://u3rho52rxfy3" path="res://jumpscare/gun.tscn" id="4_u1wax"]
 
 [node name="Jumpscare" type="Node2D"]
 script = ExtResource("1_1nfrj")
@@ -21,8 +22,11 @@ initial_cooldown = 2.1
 [node name="space_prompt" type="Label" parent="."]
 unique_name_in_owner = true
 offset_left = -304.0
-offset_top = 120.0
+offset_top = -200.0
 offset_right = -127.0
-offset_bottom = 143.0
+offset_bottom = -177.0
 scale = Vector2(4.04446, 4.04446)
 text = "AHHH PRESS SPACE"
+
+[node name="gun" parent="." instance=ExtResource("4_u1wax")]
+unique_name_in_owner = true

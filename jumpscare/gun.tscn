@@ -1,0 +1,118 @@
+[gd_scene load_steps=11 format=3 uid="uid://u3rho52rxfy3"]
+
+[ext_resource type="Script" uid="uid://cx7iwg37ypo1f" path="res://jumpscare/gun.gd" id="1_377su"]
+[ext_resource type="Texture2D" uid="uid://p8xqyfd1w5h5" path="res://jumpscare/assets/gun.png" id="1_dq2in"]
+[ext_resource type="Texture2D" uid="uid://cre6iugaxpo4j" path="res://jumpscare/assets/gun_shoot_flash.png" id="2_dantf"]
+[ext_resource type="Texture2D" uid="uid://dr8trenvg88mq" path="res://jumpscare/assets/gun_shoot_no_flash.png" id="3_fw5ye"]
+[ext_resource type="Texture2D" uid="uid://cr3yj7y5hn5d1" path="res://jumpscare/assets/gun_reload.png" id="4_377su"]
+[ext_resource type="AudioStream" uid="uid://b778v20pwocbk" path="res://jumpscare/assets/253734__kodack__shotgun-fire-and-cock-sound-for-gaming.wav" id="5_dantf"]
+[ext_resource type="AudioStream" uid="uid://7fmlk6exftvc" path="res://jumpscare/assets/455916__bolkmar__shotgun-magazine-2.wav" id="6_fw5ye"]
+
+[sub_resource type="Animation" id="Animation_xvwqc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_dq2in")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 40)]
+}
+
+[sub_resource type="Animation" id="Animation_127w2"]
+resource_name = "shoot_reload"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.31, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_dantf"), ExtResource("3_fw5ye"), ExtResource("1_dq2in"), ExtResource("4_377su"), ExtResource("1_dq2in")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(0.03983, 1),
+"update": 0,
+"values": [Vector2(112, 88), Vector2(80, 40)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShotExplosion")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ShellBounce")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_127w2"]
+_data = {
+&"RESET": SubResource("Animation_xvwqc"),
+&"shoot_reload": SubResource("Animation_127w2")
+}
+
+[node name="gun" type="Node2D"]
+script = ExtResource("1_377su")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(80, 40)
+scale = Vector2(0.392702, 0.392702)
+texture = ExtResource("1_dq2in")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_127w2")
+}
+
+[node name="ShotExplosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_dantf")
+volume_db = -23.616
+
+[node name="ShellBounce" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_fw5ye")
+volume_db = -1.59
