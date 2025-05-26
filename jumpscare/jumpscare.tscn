@@ -40,3 +40,7 @@ offset_right = -194.0
 offset_bottom = 315.0
 theme_override_font_sizes/font_size = 66
 text = "score: 2763"
+
+[node name="KillSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -21.21
