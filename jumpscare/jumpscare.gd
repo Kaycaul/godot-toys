@@ -1,6 +1,5 @@
 extends Node2D
 
-# TODO: add particle system explosion with gravity when you shoot him
 # TODO: count how many successful shots the player gets on the jumpscare and display score on hud
 # TODO: make him expand or something to indicate how long you have to shoot
 # TODO: end the game (and restart) when you miss your window to shoot
@@ -11,6 +10,8 @@ extends Node2D
 @onready var sneaks_scare: SneaksScare = %sneaks_scare
 @onready var space_prompt: Label = %space_prompt
 @onready var gun: Gun = %gun
+
+var on_hit_particle_explosion : Resource = preload("uid://bfe05b5oab0la")
 
 var displaying_jumpscare := false
 var game_speed_scale := 1.0
@@ -39,9 +40,19 @@ func shoot() -> void:
 	if gun.is_reloading(): return # TODO: play fail sound here
 	gun.shoot()
 	if displaying_jumpscare:
+		shoot_jumpscare()
+
+func shoot_jumpscare() -> void:
 		hide_jumpscare()
+		spawn_explosion()
 		# TODO: gain a point
 		multiply_game_speed(1.025)
+
+## spawn the particle system explosion when shooting the jumpscare
+func spawn_explosion() -> void:
+	var new_explosion : JumpscareExplosion = on_hit_particle_explosion.instantiate()
+	new_explosion.position = sneaks_scare.position
+	add_child(new_explosion)
 
 func multiply_game_speed(amount) -> void:
 	game_speed_scale *= amount

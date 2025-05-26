@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfe05b5oab0la"]
+
+[ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://common assets/sneakers.png" id="1_88mkk"]
+[ext_resource type="Script" uid="uid://cd5by8ioiirg6" path="res://jumpscare/explosion.gd" id="1_qbx3b"]
+[ext_resource type="Shader" uid="uid://dxn2mi101vvjy" path="res://jumpscare/sneaks_scare.gdshader" id="2_n3qtm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_07h8r"]
+shader = ExtResource("2_n3qtm")
+shader_parameter/flashing = true
+shader_parameter/wega_color = true
+
+[sub_resource type="Curve" id="Curve_qbx3b"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.43379, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_n3qtm"]
+curve = SubResource("Curve_qbx3b")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_07h8r"]
+lifetime_randomness = 0.4
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+angle_min = -180.0
+angle_max = 180.0
+spread = 180.0
+initial_velocity_min = 2507.78
+initial_velocity_max = 3092.22
+gravity = Vector3(0, 20000, 0)
+damping_min = 6000.0
+damping_max = 6000.0
+alpha_curve = SubResource("CurveTexture_n3qtm")
+
+[node name="Explosion" type="Node2D"]
+z_index = -1
+script = ExtResource("1_qbx3b")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_07h8r")
+scale = Vector2(1.00949, 1.008)
+amount = 100
+texture = ExtResource("1_88mkk")
+explosiveness = 0.9
+process_material = SubResource("ParticleProcessMaterial_07h8r")
