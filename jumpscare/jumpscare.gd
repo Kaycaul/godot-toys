@@ -10,17 +10,20 @@ extends Node2D
 @onready var sneaks_scare: SneaksScare = %sneaks_scare
 @onready var space_prompt: Label = %space_prompt
 @onready var gun: Gun = %gun
+@onready var score_label: Label = %ScoreLabel
 
 var on_hit_particle_explosion : Resource = preload("uid://bfe05b5oab0la")
 
 var displaying_jumpscare := false
 var game_speed_scale := 1.0
 var hold_to_shoot := false
+var score := 0
 
 func _ready() -> void:
 	sneaks_scare.begin_scare_timer()
 	sneaks_scare.on_jumpscare.connect(on_jumpscare)
 	space_prompt.hide()
+	score_label.text = ""
 
 func _input(event: InputEvent) -> void:
 	attempt_to_shoot(event)
@@ -45,8 +48,15 @@ func shoot() -> void:
 func shoot_jumpscare() -> void:
 		hide_jumpscare()
 		spawn_explosion()
-		# TODO: gain a point
+		gain_points(1)
 		multiply_game_speed(1.025)
+
+func gain_points(points: int) -> void:
+	score += points
+	update_score_label()
+
+func update_score_label() -> void:
+	score_label.text = "score: " + str(score)
 
 ## spawn the particle system explosion when shooting the jumpscare
 func spawn_explosion() -> void:

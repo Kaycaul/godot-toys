@@ -10,6 +10,7 @@ script = ExtResource("1_1nfrj")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.678431)
+z_index = -2
 scale = Vector2(9.13875, 5.19026)
 texture = ExtResource("2_oojxh")
 
@@ -30,3 +31,12 @@ text = "AHHH PRESS SPACE"
 
 [node name="gun" parent="." instance=ExtResource("4_u1wax")]
 unique_name_in_owner = true
+
+[node name="ScoreLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -552.0
+offset_top = 224.0
+offset_right = -194.0
+offset_bottom = 315.0
+theme_override_font_sizes/font_size = 66
+text = "score: 2763"
