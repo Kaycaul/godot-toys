@@ -1,6 +1,5 @@
 extends Node2D
 
-# TODO: make him expand or something to indicate how long you have to shoot
 # TODO: end the game (and restart) when you miss your window to shoot
 # TODO: define game speed scale with a literal difficulty curve
 # TODO: overly dramatic synthwave music or something lmao
