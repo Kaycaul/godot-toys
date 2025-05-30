@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://fuepbxuyuvks"]
+[gd_scene load_steps=7 format=3 uid="uid://fuepbxuyuvks"]
 
 [ext_resource type="Texture2D" uid="uid://dsll6hmgr2uut" path="res://common assets/sneakers.png" id="1_rvaqk"]
 [ext_resource type="Script" uid="uid://do1bu7lpvk1sn" path="res://jumpscare/sneaks_scare.gd" id="1_x2ghu"]
 [ext_resource type="Shader" uid="uid://dxn2mi101vvjy" path="res://jumpscare/sneaks_scare.gdshader" id="2_od2bf"]
 [ext_resource type="AudioStream" uid="uid://5dq5basi4dvr" path="res://common assets/wega.wav" id="3_w3jst"]
+
+[sub_resource type="Curve" id="Curve_od2bf"]
+_data = [Vector2(0, 0), 0.0, 7.04863, 0, 0, Vector2(0.228782, 0.770705), 1.033, 1.033, 0, 0, Vector2(1, 1), 0.0199387, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oyeqe"]
 shader = ExtResource("2_od2bf")
@@ -12,6 +16,7 @@ shader_parameter/wega_color = false
 
 [node name="sneaks_scare" type="Node2D"]
 script = ExtResource("1_x2ghu")
+scream_intensity_curve = SubResource("Curve_od2bf")
 
 [node name="sprite" type="Sprite2D" parent="."]
 unique_name_in_owner = true

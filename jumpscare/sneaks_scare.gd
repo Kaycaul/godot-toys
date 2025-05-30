@@ -4,6 +4,7 @@ class_name SneaksScare
 signal on_jumpscare
 
 @export var initial_cooldown: float = 1.0
+@export var scream_intensity_curve: Curve
 
 @onready var jumpscare_timer: Timer = %Timer
 @onready var sprite: Sprite2D = %sprite
@@ -27,7 +28,7 @@ func widen_while_visible(delta : float) -> void:
 	if not displaying_jumpscare: return
 	var true_scream_duration := scream.stream.get_length() / speed_scale
 	var scream_sound_progress := time_since_jumpscare_start / true_scream_duration
-	# TODO: transform `scream_sound_progress` here with a [0,1]->[0,1] curve
+	scream_sound_progress = scream_intensity_curve.sample(scream_sound_progress)
 	var new_width_scale := original_width_scale * (1 + scream_sound_progress)
 	sprite.scale.x = new_width_scale
 	time_since_jumpscare_start += delta
