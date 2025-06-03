@@ -65,7 +65,7 @@ func shoot_jumpscare() -> void:
 	hide_jumpscare()
 	spawn_explosion()
 	gain_points(1)
-	multiply_game_speed(1.025)
+	multiply_game_speed(1.1)
 	play_random_hit_sound()
 
 func play_random_hit_sound() -> void:

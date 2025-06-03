@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://dp1gwksyjaoqs"
+path="res://.godot/imported/alzolanskii-the-weeknd.gif-ae0c253a614b8ed04ae672957e171c34.tres"
+
+[deps]
+
+source_file="res://weeknd/alzolanskii-the-weeknd.gif"
+dest_files=["res://.godot/imported/alzolanskii-the-weeknd.gif-ae0c253a614b8ed04ae672957e171c34.tres"]
+
+[params]
+
+frames_per_second=30
