@@ -1,0 +1,184 @@
+[gd_scene load_steps=43 format=3 uid="uid://bibib2h50t0pg"]
+
+[ext_resource type="Script" uid="uid://b3x34jp0aw0mg" path="res://weeknd/player.gd" id="1_4wqi0"]
+[ext_resource type="Texture2D" uid="uid://ceyd117f7s0va" path="res://weeknd/weeknd melon frames/ezgif-frame-001.jpg" id="1_8pi7q"]
+[ext_resource type="Texture2D" uid="uid://d22yqrpg06xwn" path="res://weeknd/weeknd melon frames/ezgif-frame-002.jpg" id="2_4wqi0"]
+[ext_resource type="Texture2D" uid="uid://cryuwupxpi2ed" path="res://weeknd/weeknd melon frames/ezgif-frame-003.jpg" id="3_p0sn3"]
+[ext_resource type="Texture2D" uid="uid://q02mbitou04b" path="res://weeknd/weeknd melon frames/ezgif-frame-004.jpg" id="4_0y81r"]
+[ext_resource type="Texture2D" uid="uid://mnli7d20t8uh" path="res://weeknd/weeknd melon frames/ezgif-frame-005.jpg" id="5_4n5i1"]
+[ext_resource type="Texture2D" uid="uid://dh2ianw4yf5ba" path="res://weeknd/weeknd melon frames/ezgif-frame-006.jpg" id="6_obu4l"]
+[ext_resource type="Texture2D" uid="uid://pk10gl1um3tf" path="res://weeknd/weeknd melon frames/ezgif-frame-007.jpg" id="7_21u2m"]
+[ext_resource type="Texture2D" uid="uid://diyxsw7lfm6jv" path="res://weeknd/weeknd melon frames/ezgif-frame-008.jpg" id="8_hq2ec"]
+[ext_resource type="Texture2D" uid="uid://dj0xxdx1p3utw" path="res://weeknd/weeknd melon frames/ezgif-frame-009.jpg" id="9_lcspy"]
+[ext_resource type="Texture2D" uid="uid://28w5guiaf6c6" path="res://weeknd/weeknd melon frames/ezgif-frame-010.jpg" id="10_fl6fk"]
+[ext_resource type="Texture2D" uid="uid://cvdh4sqneccmm" path="res://weeknd/weeknd melon frames/ezgif-frame-011.jpg" id="11_mxnm1"]
+[ext_resource type="Texture2D" uid="uid://dhm6b6eo0ngdw" path="res://weeknd/weeknd melon frames/ezgif-frame-012.jpg" id="12_o7vpf"]
+[ext_resource type="Texture2D" uid="uid://dq2p1ornwmxlm" path="res://weeknd/weeknd melon frames/ezgif-frame-013.jpg" id="13_du00r"]
+[ext_resource type="Texture2D" uid="uid://nkgh6b3qyo5p" path="res://weeknd/weeknd melon frames/ezgif-frame-014.jpg" id="14_8ybyv"]
+[ext_resource type="Texture2D" uid="uid://bf6vch8q6lykr" path="res://weeknd/weeknd melon frames/ezgif-frame-015.jpg" id="15_gsqvg"]
+[ext_resource type="Texture2D" uid="uid://cflm2w5q0sxhr" path="res://weeknd/weeknd melon frames/ezgif-frame-016.jpg" id="16_sxdaj"]
+[ext_resource type="Texture2D" uid="uid://cmshljvw0s20n" path="res://weeknd/weeknd melon frames/ezgif-frame-017.jpg" id="17_rnw81"]
+[ext_resource type="Texture2D" uid="uid://brkk4g66e8x5p" path="res://weeknd/weeknd melon frames/ezgif-frame-018.jpg" id="18_ixlki"]
+[ext_resource type="Texture2D" uid="uid://fvo8asfpcrom" path="res://weeknd/weeknd melon frames/ezgif-frame-019.jpg" id="19_xjk3i"]
+[ext_resource type="Texture2D" uid="uid://5iwuaf6y0otk" path="res://weeknd/weeknd melon frames/ezgif-frame-020.jpg" id="20_1u538"]
+[ext_resource type="Texture2D" uid="uid://cdij1lj2tvdbs" path="res://weeknd/weeknd melon frames/ezgif-frame-021.jpg" id="21_r3yw6"]
+[ext_resource type="Texture2D" uid="uid://d4iobap0up362" path="res://weeknd/weeknd melon frames/ezgif-frame-022.jpg" id="22_s523t"]
+[ext_resource type="Texture2D" uid="uid://wnq5eomcquv1" path="res://weeknd/weeknd melon frames/ezgif-frame-023.jpg" id="23_xt51l"]
+[ext_resource type="Texture2D" uid="uid://boe7soc4h3ppk" path="res://weeknd/weeknd melon frames/ezgif-frame-024.jpg" id="24_jrwwk"]
+[ext_resource type="Texture2D" uid="uid://ckg13e3focumj" path="res://weeknd/weeknd melon frames/ezgif-frame-025.jpg" id="25_cwqy7"]
+[ext_resource type="Texture2D" uid="uid://doiilm0dyvp5d" path="res://weeknd/weeknd melon frames/ezgif-frame-026.jpg" id="26_65s05"]
+[ext_resource type="Texture2D" uid="uid://c0jsy1yx51xp7" path="res://weeknd/weeknd melon frames/ezgif-frame-027.jpg" id="27_tok5r"]
+[ext_resource type="Texture2D" uid="uid://dh77g7c3v6ko1" path="res://weeknd/weeknd melon frames/ezgif-frame-028.jpg" id="28_ld6gv"]
+[ext_resource type="Texture2D" uid="uid://cjpj8q4xwky85" path="res://weeknd/weeknd melon frames/ezgif-frame-029.jpg" id="29_27uq2"]
+[ext_resource type="Texture2D" uid="uid://j26ne2tiagg5" path="res://weeknd/weeknd melon frames/ezgif-frame-030.jpg" id="30_iohcy"]
+[ext_resource type="Texture2D" uid="uid://bkpvmo6ir852k" path="res://weeknd/weeknd melon frames/ezgif-frame-031.jpg" id="31_dk8em"]
+[ext_resource type="Texture2D" uid="uid://djvq8dyjfk1n4" path="res://weeknd/weeknd melon frames/ezgif-frame-032.jpg" id="32_iq0sx"]
+[ext_resource type="Texture2D" uid="uid://bsrpyw37aieq4" path="res://weeknd/weeknd melon frames/ezgif-frame-033.jpg" id="33_c6i7y"]
+[ext_resource type="Texture2D" uid="uid://bjkomog1tjn28" path="res://weeknd/weeknd melon frames/ezgif-frame-034.jpg" id="34_3jxd3"]
+[ext_resource type="Texture2D" uid="uid://cki0354675je1" path="res://weeknd/weeknd melon frames/ezgif-frame-035.jpg" id="35_e6n8o"]
+[ext_resource type="Texture2D" uid="uid://me0t64pywvs" path="res://weeknd/weeknd melon frames/ezgif-frame-036.jpg" id="36_kgk4y"]
+[ext_resource type="Texture2D" uid="uid://mup4aw46dnw7" path="res://weeknd/weeknd melon frames/ezgif-frame-037.jpg" id="37_wjebm"]
+[ext_resource type="Texture2D" uid="uid://hkpasykaixmm" path="res://weeknd/weeknd melon frames/ezgif-frame-038.jpg" id="38_k111l"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kn0qm"]
+friction = 0.35
+bounce = 0.75
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dpbp1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8pi7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4wqi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p0sn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0y81r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4n5i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_obu4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_21u2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hq2ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lcspy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fl6fk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mxnm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_o7vpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_du00r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8ybyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gsqvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_sxdaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_rnw81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ixlki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_xjk3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1u538")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_r3yw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_s523t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_xt51l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jrwwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_cwqy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_65s05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_tok5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ld6gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_27uq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_iohcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dk8em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_iq0sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_c6i7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_3jxd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_e6n8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_kgk4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_wjebm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_k111l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uswjl"]
+size = Vector2(96, 96)
+
+[node name="Player" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_kn0qm")
+lock_rotation = true
+script = ExtResource("1_4wqi0")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_dpbp1")
+autoplay = "default"
+frame_progress = 0.324497
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uswjl")

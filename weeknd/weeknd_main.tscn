@@ -1,36 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://bthlc1hvl5ej3"]
+[gd_scene load_steps=4 format=3 uid="uid://bthlc1hvl5ej3"]
 
-[ext_resource type="SpriteFrames" uid="uid://dp1gwksyjaoqs" path="res://weeknd/alzolanskii-the-weeknd.gif" id="1_uswjl"]
+[ext_resource type="PackedScene" uid="uid://bibib2h50t0pg" path="res://weeknd/player.tscn" id="1_kn0qm"]
 [ext_resource type="Texture2D" uid="uid://c2ej4httw3scb" path="res://common assets/wolp.png" id="2_kn0qm"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kn0qm"]
-friction = 0.35
-bounce = 0.75
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uswjl"]
-size = Vector2(96, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kn0qm"]
 size = Vector2(16, 16)
 
 [node name="WeekndMain" type="Node2D"]
 
-[node name="Player" type="RigidBody2D" parent="."]
+[node name="Player" parent="." instance=ExtResource("1_kn0qm")]
 position = Vector2(0, -184)
-physics_material_override = SubResource("PhysicsMaterial_kn0qm")
-
-[node name="Sprite" type="AnimatedSprite2D" parent="Player"]
-scale = Vector2(0.15, 0.15)
-sprite_frames = ExtResource("1_uswjl")
-animation = &"gif"
-autoplay = "gif"
-frame = 25
-frame_progress = 0.0297094
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_uswjl")
+mass = 78.925
+linear_damp = 5.0
+jump_force = 100000.0
+move_force = 250000.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+process_callback = 0
+position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(16, 88)
